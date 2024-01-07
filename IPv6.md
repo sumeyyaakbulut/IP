@@ -8,3 +8,8 @@ IPv6'nın önemli özelliklerinden biri, yöneticinin yapılandırmasına gerek 
 
 
 ![hexadecimal](https://github.com/sumeyyaakbulut/IP/assets/62395974/798501e6-591b-466d-851a-69025ea46a13)
+
+
+![1](https://github.com/sumeyyaakbulut/IP/assets/62395974/6ab12451-5a47-4d3d-9a39-5f75ec3fd6a1)
+
+
