@@ -4,6 +4,23 @@ Başlangıçta, A, B ve C sınıfı adres aralıkları ile farklı büyüklükte
 Değişken Uzunluklu Alt Ağ Maskesi (VLSM) ve Network Address Translation (NAT) gibi teknolojiler, IP adreslerini daha etkili bir şekilde kullanmamıza yardımcı oldu. VLSM, istediğimiz alt ağ maskesini kullanarak daha küçük alt ağlar oluşturmamıza izin verdi. NAT ve Port Address Translation (PAT) ise bir genel IP adresinin arkasında birçok özel IP adresini paylaşmamıza olanak tanıdı.
 Ancak, internetin hızlı büyümesi ve cihaz sayısındaki patlama, bu önlemlerin sınırlarını zorladı. VLSM ve NAT/PAT gibi çözümlere rağmen, IPv6'nın getirdiği 128 bitlik adresleme sistemi (2^128 sayısı yani 340 undecilyon civarında IP adresi sağlayabilir), çok daha geniş bir adresleme alanı sağlayarak gelecekteki büyüme ve genişleme ihtiyaçlarına cevap vermeyi hedefler. IPv6, internetin daha sürdürülebilir ve genişletilebilir olmasını sağlamak için önemli bir adımdır.
 
+IPv6 sadece daha uzun adreslerden ibaret değil. IPv6'nin hedefleri, uçtan uca güvenlik, hizmet kalitesi, daha geniş adres alanı ve basitleştirilmiş, daha verimli başlık formatı elde etmiştir. Sonunda IPv4 üzerinde aşağıdaki iyileştirmeler yapıldı:
+* Yeni Başlık Formatı: IPv6, IPv4 başlığındaki gereksiz alanları ortadan kaldırarak başlık formatını daha verimli hale getirir. Bu, ara yönlendiriciler için daha etkili bir performans sağlar.
+
+* Genişletilebilirlik: IPv6 başlığı, başlık sonrasında eklenen uzantı başlıkları ile genişletilebilir bir yapıya sahiptir. Bu özellik, protokolün gelecekteki değişikliklere uyum sağlamasına olanak tanır.
+
+* Geniş Adres Alanı: IPv6'nın 128-bitlik adres uzayı, daha fazla benzersiz IP adresi sağlar. Bu, birden fazla alt ağın oluşturulmasına ve adres tahsisinin daha etkili bir şekilde yapılmasına imkan tanır.
+
+* Daha İyi Güvenlik: IPv6, IPSec'i standart olarak içerir ve başlık uzantıları aracılığıyla şifreleme ve kimlik doğrulama gibi güvenlik özelliklerini kolaylaştırır.
+
+* SLAAC (Durum Bilgisi Olmayan ve Durum Bilgisi Olan Ana Bilgisayar Adresleme): DHCP sunucusu olmadığında, LAN'daki cihazlar otomatik olarak IP adreslerini alabilir ve ağı kullanmaya başlayabilir. Bu, ağ konfigürasyonunun daha esnek ve otomatik olmasını sağlar.
+
+* Daha Verimli LAN Etkileşimleri: IPv6, yayın tabanlı ARP protokolünü daha verimli ICMPv6 Komşu Keşfi mesajları ile değiştirir. Bu, ağ üzerindeki cihazların daha etkili bir şekilde iletişim kurmasını sağlar.
+
+* Cihaz Başına Birden Fazla IPv6 Adresi: IPv6, bir cihazın aynı alt ağda birden fazla IPv6 adresine sahip olmasına izin verir. Bu, gelişmiş güvenlik, daha fazla gizlilik ve ek ağ özellikleri sağlar.
+
+* Yeni Adres Türleri: IPv6 paketleri, yönlendirilemeyen IPv6 bağlantısı yerel adresleri gibi yeni ağ katmanı adres türlerini destekler. Bu, özel ağ senaryolarına uygunluk sağlar.
+
 ## IPv6 Adres Gösterimi
 
 
