@@ -16,13 +16,14 @@ IPv6 sadece daha uzun adreslerden ibaret değil. IPv6'nin hedefleri, uçtan uca 
 
 * Daha İyi Güvenlik: IPv6, IPSec'i standart olarak içerir ve başlık uzantıları aracılığıyla şifreleme ve kimlik doğrulama gibi güvenlik özelliklerini kolaylaştırır.
 
-* SLAAC (Durum Bilgisi Olmayan ve Durum Bilgisi Olan Ana Bilgisayar Adresleme): DHCP sunucusu olmadığında, LAN'daki cihazlar otomatik olarak IP adreslerini alabilir ve ağı kullanmaya başlayabilir. Bu, ağ konfigürasyonunun daha esnek ve otomatik olmasını sağlar.
+* SLAAC (Durum Bilgisi Olmayan ve Durum Bilgisi Olan Ana Bilgisayar Adresleme): DHCP sunucusu olmadığında, LAN'daki cihazlar otomatik olarak IP adreslerini alabilir ve ağı kullanmaya başlayabilir. Bu, ağ konfigürasyonunun daha esnek ve otomatik olmasını sağlar.(SLAAC, IPv6'nın bir özelliğidir ve IPv4 ile doğrudan karşılığı yoktur. IPv4 adresleri daha küçük bir uzaya sahiptir ve genellikle DHCP (Dynamic Host Configuration Protocol) kullanılarak yapılandırılır. DHCP, IPv4 cihazlarına dinamik olarak IP adresi, alt ağ maskesi, gateway adresi ve diğer konfigürasyon bilgilerini sağlayan bir protokoldür.)
 
-* Daha Verimli LAN Etkileşimleri: IPv6, yayın tabanlı ARP protokolünü daha verimli ICMPv6 Komşu Keşfi mesajları ile değiştirir. Bu, ağ üzerindeki cihazların daha etkili bir şekilde iletişim kurmasını sağlar.
+* Daha Verimli LAN Etkileşimleri: IPv6, yayın tabanlı ARP protokolünü daha verimli ICMPv6 Komşu Keşfi mesajları ile değiştirir. Bu, ağ üzerindeki cihazların daha etkili bir şekilde iletişim kurmasını sağlar.(Ethernet segmentlerinde IPv4 kullanıldığında, katman 3'ten katman 2'ye eşleme olması gerekir; Ek olarak IPv4, adres çözümlemesini gerçekleştirmek için bir ARP yayını kullanır; bu, Ethernet bağlantı noktasında bir kesinti olarak işlenen bir Ethernet segmentindeki tüm istasyonlara gönderilen ve bu istasyonlar tarafından alınan bir ARP yayın paketini içerir.)
 
 * Cihaz Başına Birden Fazla IPv6 Adresi: IPv6, bir cihazın aynı alt ağda birden fazla IPv6 adresine sahip olmasına izin verir. Bu, gelişmiş güvenlik, daha fazla gizlilik ve ek ağ özellikleri sağlar.
 
 * Yeni Adres Türleri: IPv6 paketleri, yönlendirilemeyen IPv6 bağlantısı yerel adresleri gibi yeni ağ katmanı adres türlerini destekler. Bu, özel ağ senaryolarına uygunluk sağlar.
+  
 
 ## IPv6 Adres Gösterimi
 
