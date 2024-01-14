@@ -34,3 +34,5 @@ Bu nedenle, güvenlik politikaları, proxy ARP ve benzeri mekanizmaların nasıl
  ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/ca3e3478-e127-4bc1-ac86-9d7ac724939a)
 
 Az önce bir ARP isteği aldığını, 0800:0222:2222 Mac adresiyle ARP tabloma 192.168.5.1 ana bilgisayarını ekleyeyim. Her durumda yönlendirici isteği alacak ve paket iletme işlemini başlatacaktır. İlk önce gönderen makinenin MAC adresini ve IP adresini kendi ARP tablosuna kaydedecektir. Yönlendirici de diğerleri gibi bir IP cihazıdır ve bu nedenle tüm IP kurallarına uyacaktır.
+
+
