@@ -7,7 +7,7 @@
 
 * Her katmanda, 3.katmana ulaşana kadar başlıklar eklenenecektir. Onu IP başlığına yerleştirecek ve ardından katman 2'den gerçekten bir paket göndermesini isteyecektir.
 
-![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/d314719f-669a-4797-8654-91bcf730cd54)
+ ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/d314719f-669a-4797-8654-91bcf730cd54)
 
 
 * Bir UDP başlığı koyacağım.Destination IP eklenir. Destination IP(hedef IP) adresini temsil eder. Bu terim, bir ağ iletişiminde bir paketin hedef IP adresini ifade eder. Destination IP 192.168.4.1 dir. Source IP eklenir. Destination IP adresi, geldiği donanımın IP adresini içeren IP paket alanıdır. Source IP 192.168.5.1 dir.
@@ -20,7 +20,7 @@
 
 * Bu muhtemelen hataların ve hataların ilk ve en yaygın kaynaklarından biridir ve bu sorunu giderirken doğru varsayılan ağ geçidi IP adresinin yapılandırıldığından emin olmalıyız. Nereye göndereceğimi veya bunu hangi yönlendiricinin işlemesi gerektiğini bilmiyorsam paket oraya ulaşmayacaktır.
 
-![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/7022aabc-982d-46ef-bfc7-1427c279dcf6)
+ ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/7022aabc-982d-46ef-bfc7-1427c279dcf6)
 
 
 * DST MAC Broadcast, bir cihazın ağdaki tüm diğer cihazlara ulaşmak için kullandığı bir MAC adresidir. Genellikle "FF:FF:FF:FF:FF:FF" gibi bir yayın MAC adresini temsil eder. Örneğin, bir cihaz ARP Request göndermek istediğinde, bu isteği ağdaki tüm cihazlara yönlendirmek için DST MAC Broadcast kullanılır. SRC MAC, bir veri paketinin kaynak cihazının MAC adresini temsil eder. Bu adres, gönderen cihazın ağdaki benzersiz tanımlayıcısıdır. ARP Request, bir cihazın ağdaki başka bir cihazın IP adresine karşılık gelen MAC adresini öğrenmek için gönderdiği bir ARP paketidir. Bu paket, hedef IP adresini içerir ve ağdaki tüm cihazlara yayınlanır. ARP Request'in amacı, belirli bir IP adresine karşılık gelen MAC adresini bulmak ve ağ cihazları arasında bu çözümlemeyi sağlamaktır.
@@ -31,6 +31,6 @@ Proxy ARP kullanımının kendine özgü güvenlik sonuçları vardır. Özellik
 Yanlış yapılandırılmış veya kötü niyetli bir cihaz, proxy ARP kullanarak ağdaki diğer cihazları yanıltabilir veya saldırabilir.
 Bu nedenle, güvenlik politikaları, proxy ARP ve benzeri mekanizmaların nasıl yapılandırılacağına dair dikkatli bir şekilde belirlenmelidir.
 
-![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/ca3e3478-e127-4bc1-ac86-9d7ac724939a)
+ ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/ca3e3478-e127-4bc1-ac86-9d7ac724939a)
 
 Az önce bir ARP isteği aldığını, 0800:0222:2222 Mac adresiyle ARP tabloma 192.168.5.1 ana bilgisayarını ekleyeyim. Her durumda yönlendirici isteği alacak ve paket iletme işlemini başlatacaktır. İlk önce gönderen makinenin MAC adresini ve IP adresini kendi ARP tablosuna kaydedecektir. Yönlendirici de diğerleri gibi bir IP cihazıdır ve bu nedenle tüm IP kurallarına uyacaktır.
