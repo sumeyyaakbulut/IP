@@ -15,4 +15,4 @@
 
 * Katman 2, “Bu IP hakkında bilgim yok, MAC adresim yok ve bu yüzden bir ARP isteği yoluyla çözmeye çalışacağım” diyerek yanıt verir. Paket park edilecek ve ARP isteği tamamlanana kadar arabelleklerde kalacaktır.
 
-*Bu noktada, tam 3. ve 2. katman arasında cihaz şunu söyleyecektir: “Peki, bu IP adresine ve bu maskeye göre burada /24 var. Hedef farklı bir ağda bulunmaktadır. 192.168.5 ağındayım ve hedef 192.168.4 ağındadır."
+* Bu noktada, tam 3. ve 2. katman arasında cihaz şunu söyleyecektir: “Peki, bu IP adresine ve bu maskeye göre burada /24 var. Hedef farklı bir ağda bulunmaktadır. 192.168.5 ağındayım ve hedef 192.168.4 ağındadır."
