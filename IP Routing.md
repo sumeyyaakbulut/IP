@@ -30,3 +30,7 @@ Bu, varsayılan ağ geçidi (gateway) çağrılarına yanıt verebilmek ve yanl�
 Proxy ARP kullanımının kendine özgü güvenlik sonuçları vardır. Özellikle, ağdaki cihazların birbirleriyle doğrudan iletişim kurma yeteneğini artırabilir, ancak aynı zamanda kötü amaçlı kullanımlara açık bir durum yaratabilir.
 Yanlış yapılandırılmış veya kötü niyetli bir cihaz, proxy ARP kullanarak ağdaki diğer cihazları yanıltabilir veya saldırabilir.
 Bu nedenle, güvenlik politikaları, proxy ARP ve benzeri mekanizmaların nasıl yapılandırılacağına dair dikkatli bir şekilde belirlenmelidir.
+
+![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/ca3e3478-e127-4bc1-ac86-9d7ac724939a)
+
+Az önce bir ARP isteği aldığını, 0800:0222:2222 Mac adresiyle ARP tabloma 192.168.5.1 ana bilgisayarını ekleyeyim. Her durumda yönlendirici isteği alacak ve paket iletme işlemini başlatacaktır. İlk önce gönderen makinenin MAC adresini ve IP adresini kendi ARP tablosuna kaydedecektir. Yönlendirici de diğerleri gibi bir IP cihazıdır ve bu nedenle tüm IP kurallarına uyacaktır.
