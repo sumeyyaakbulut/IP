@@ -12,3 +12,7 @@
 
 * Bir UDP başlığı koyacağım.Destination IP eklenir. Destination IP(hedef IP) adresini temsil eder. Bu terim, bir ağ iletişiminde bir paketin hedef IP adresini ifade eder. Destination IP
 192.168.4.1 dir. Source IP eklenir. Destination IP adresi, geldiği donanımın IP adresini içeren IP paket alanıdır. Source IP 192.168.5.1 dir.
+
+* Katman 2, “Bu IP hakkında bilgim yok, MAC adresim yok ve bu yüzden bir ARP isteği yoluyla çözmeye çalışacağım” diyerek yanıt verir. Paket park edilecek ve ARP isteği tamamlanana kadar arabelleklerde kalacaktır.
+
+*Bu noktada, tam 3. ve 2. katman arasında cihaz şunu söyleyecektir: “Peki, bu IP adresine ve bu maskeye göre burada /24 var. Hedef farklı bir ağda bulunmaktadır. 192.168.5 ağındayım ve hedef 192.168.4 ağındadır."
