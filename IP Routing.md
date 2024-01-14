@@ -41,3 +41,7 @@ Bu durumda yönlendirici, “Hey, bu benim MAC adresim; paketleri bana iletmeye 
 
 Az önce 192.168.5.2'den bir ARP yanıtı aldım. IP'sini ve MAC'ini ARP tabloma ekleyedim. Artık varsayılan ağ geçidim için bir eşlemem var. Katman 2'ye 192.168.4.2 için bir eşleme verebilirim.
 Katman 2'ye 192.168.4.2 için bir eşleme  0800:0333:2222 verilir.
+
+Bu girişler eninde sonunda zaman aşımına uğrayacaktır ve bu nedenle boş zamanlara ve mutlak sürelere bağlı olarak ARP işlemi konuşma boyunca tekrarlanabilir.
+
+![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/256318eb-1c11-4f5b-9859-4a37f54e4fd1)
