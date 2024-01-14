@@ -45,3 +45,7 @@ Katman 2'ye 192.168.4.2 için bir eşleme  0800:0333:2222 verilir.
 Bu girişler eninde sonunda zaman aşımına uğrayacaktır ve bu nedenle boş zamanlara ve mutlak sürelere bağlı olarak ARP işlemi konuşma boyunca tekrarlanabilir.
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/256318eb-1c11-4f5b-9859-4a37f54e4fd1)
+
+Beklemeye alınan paket, amaçlanan hedefin IP adresi, gönderenin kaynak IP adresi, gönderenin kaynak MAC'i ve hedef MAC, yönlendiricinin MAC adresi kullanılarak serbest bırakılır ve gönderilir.
+
+Sadece router'da routing fonksiyonundan bahsettiğimize göre bu cihazın sadece routing fonksiyonu ile nasıl belli bir katmana çıkacağını anlıyoruz. Yönlendirici yalnızca katman 3'te çalışır ve bu nedenle çerçevenin geldiğini görecektir. Onu sindirecek ve işleyecektir, çünkü katman 2'deki MAC adresi açısından kendisine yönlendirilmiştir. Kapsülden arındıracak ve katman 3'e gönderecek ve yönlendirme ve iletme fonksiyonunun gerçekleştiği katman 3'tedir. Bu nedenle hedef IP adresi yönlendiricinin adresi olmasa da yönlendirici, "Ben bir yönlendiriciyim, bu yüzden bunu yönlendirme tabloma göre iletmek istiyorum" diyecektir.
