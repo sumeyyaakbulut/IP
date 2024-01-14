@@ -37,3 +37,7 @@ Az önce bir ARP isteği aldığını, 0800:0222:2222 Mac adresiyle ARP tabloma 
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/a38d3b2a-e705-40a7-8271-ff4fc976849b)
 
+Bu durumda yönlendirici, “Hey, bu benim MAC adresim; paketleri bana iletmeye başlayabilirsin.” Artık gönderen ana bilgisayarın ARP tablosunda ağ geçidi IP adresini ağ geçidi MAC adresine bağlayan bir eşleme vardır. Hedefe iletilmek üzere paketleri bu ağ geçidine göndermeye hazırdır.
+
+Az önce 192.168.5.2'den bir ARP yanıtı aldım. IP'sini ve MAC'ini ARP tabloma ekleyedim. Artık varsayılan ağ geçidim için bir eşlemem var. Katman 2'ye 192.168.4.2 için bir eşleme verebilirim.
+Katman 2'ye 192.168.4.2 için bir eşleme  0800:0333:2222 verilir.
