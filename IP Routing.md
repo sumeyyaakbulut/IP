@@ -20,7 +20,8 @@
 
 * Bu muhtemelen hataların ve hataların ilk ve en yaygın kaynaklarından biridir ve bu sorunu giderirken doğru varsayılan ağ geçidi IP adresinin yapılandırıldığından emin olmalıyız. Nereye göndereceğimi veya bunu hangi yönlendiricinin işlemesi gerektiğini bilmiyorsam paket oraya ulaşmayacaktır.
 
-![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/cf98da1e-ecd7-48bb-bc45-990f669312ca)
+![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/7022aabc-982d-46ef-bfc7-1427c279dcf6)
+
 
 * DST MAC Broadcast, bir cihazın ağdaki tüm diğer cihazlara ulaşmak için kullandığı bir MAC adresidir. Genellikle "FF:FF:FF:FF:FF:FF" gibi bir yayın MAC adresini temsil eder. Örneğin, bir cihaz ARP Request göndermek istediğinde, bu isteği ağdaki tüm cihazlara yönlendirmek için DST MAC Broadcast kullanılır. SRC MAC, bir veri paketinin kaynak cihazının MAC adresini temsil eder. Bu adres, gönderen cihazın ağdaki benzersiz tanımlayıcısıdır. ARP Request, bir cihazın ağdaki başka bir cihazın IP adresine karşılık gelen MAC adresini öğrenmek için gönderdiği bir ARP paketidir. Bu paket, hedef IP adresini içerir ve ağdaki tüm cihazlara yayınlanır. ARP Request'in amacı, belirli bir IP adresine karşılık gelen MAC adresini bulmak ve ağ cihazları arasında bu çözümlemeyi sağlamaktır.
 Proxy ARP, ağdaki bir cihazın, başka bir cihazın IP adresi için MAC adresini sağlama yeteneğidir. Yani, bir cihaz kendi IP adresine sahip olmasa bile, diğer cihazların bu IP adresini çözmelerine yardımcı olabilir.
