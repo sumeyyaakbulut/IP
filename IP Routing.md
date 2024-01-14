@@ -23,5 +23,9 @@
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/cf98da1e-ecd7-48bb-bc45-990f669312ca)
 
 * DST MAC Broadcast, bir cihazın ağdaki tüm diğer cihazlara ulaşmak için kullandığı bir MAC adresidir. Genellikle "FF:FF:FF:FF:FF:FF" gibi bir yayın MAC adresini temsil eder. Örneğin, bir cihaz ARP Request göndermek istediğinde, bu isteği ağdaki tüm cihazlara yönlendirmek için DST MAC Broadcast kullanılır. SRC MAC, bir veri paketinin kaynak cihazının MAC adresini temsil eder. Bu adres, gönderen cihazın ağdaki benzersiz tanımlayıcısıdır. ARP Request, bir cihazın ağdaki başka bir cihazın IP adresine karşılık gelen MAC adresini öğrenmek için gönderdiği bir ARP paketidir. Bu paket, hedef IP adresini içerir ve ağdaki tüm cihazlara yayınlanır. ARP Request'in amacı, belirli bir IP adresine karşılık gelen MAC adresini bulmak ve ağ cihazları arasında bu çözümlemeyi sağlamaktır.
-
-
+Proxy ARP, ağdaki bir cihazın, başka bir cihazın IP adresi için MAC adresini sağlama yeteneğidir. Yani, bir cihaz kendi IP adresine sahip olmasa bile, diğer cihazların bu IP adresini çözmelerine yardımcı olabilir.
+Özellikle yönlendiriciler, proxy ARP işlevselliğini kullanarak, kendilerine yönlendirilmemiş olan ARP isteklerine yanıt verebilirler. Bu, yönlendiricinin sahip olduğu IP adresleri için diğer cihazların MAC adreslerini sağlamak anlamına gelir.
+Bu, varsayılan ağ geçidi (gateway) çağrılarına yanıt verebilmek ve yanlış yapılandırılmış makinelerden gelen bu tür ARP isteklerini ele alabilmek için kullanılır.
+Proxy ARP kullanımının kendine özgü güvenlik sonuçları vardır. Özellikle, ağdaki cihazların birbirleriyle doğrudan iletişim kurma yeteneğini artırabilir, ancak aynı zamanda kötü amaçlı kullanımlara açık bir durum yaratabilir.
+Yanlış yapılandırılmış veya kötü niyetli bir cihaz, proxy ARP kullanarak ağdaki diğer cihazları yanıltabilir veya saldırabilir.
+Bu nedenle, güvenlik politikaları, proxy ARP ve benzeri mekanizmaların nasıl yapılandırılacağına dair dikkatli bir şekilde belirlenmelidir.
