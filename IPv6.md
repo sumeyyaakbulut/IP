@@ -24,6 +24,14 @@ IPv6 sadece daha uzun adreslerden ibaret değil. IPv6'nin hedefleri, uçtan uca 
 
 * Yeni Adres Türleri: IPv6 paketleri, yönlendirilemeyen IPv6 bağlantısı yerel adresleri gibi yeni ağ katmanı adres türlerini destekler. Bu, özel ağ senaryolarına uygunluk sağlar.
   
+Ağdaki her IPv6 düğümünün, yerel segmentinin dışında iletişim kurabilmesi için küresel olarak benzersiz bir adrese ihtiyacı vardır. Peki bir düğüm böyle bir adresi nereden alır? Birkaç seçenek var:
+
+Manuel Atama: Her düğüm, bir yönetici tarafından manuel olarak bir IPv6 adresiyle yapılandırılabilir. Ölçeklenebilir bir yaklaşım değildir ve insan hatasına açıktır. 
+
+DHCPv6 (Dinamik Ana Bilgisayar Yapılandırma Protokolü sürüm 6): Ana bilgisayarlara dinamik olarak adres atamak için en yaygın olarak benimsenen protokol. Ağda bir DHCP sunucusu ve ek yapılandırma gerektirir.
+
+SLAAC (Durum Bilgisi Olmayan Adres Otomatik Yapılandırması): IPv6 otomatik adreslemeye daha basit ve daha doğrudan bir yaklaşım olacak şekilde tasarlanmıştır. RFC 4862'de tanımlandığı gibi mevcut uygulamasında SLAAC, ana bilgisayarlara DNS sunucu adresleri sağlamaz ve bu nedenle şu anda yaygın olarak benimsenmemektedir. 
+
 
 ## IPv6 Adres Gösterimi
 
