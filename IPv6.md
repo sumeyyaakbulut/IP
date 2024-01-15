@@ -30,13 +30,22 @@ Manuel Atama: Her düğüm, bir yönetici tarafından manuel olarak bir IPv6 adr
 
 DHCPv6 (Dinamik Ana Bilgisayar Yapılandırma Protokolü sürüm 6): Ana bilgisayarlara dinamik olarak adres atamak için en yaygın olarak benimsenen protokol. Ağda bir DHCP sunucusu ve ek yapılandırma gerektirir.
 
-SLAAC (Durum Bilgisi Olmayan Adres Otomatik Yapılandırması): IPv6 otomatik adreslemeye daha basit ve daha doğrudan bir yaklaşım olacak şekilde tasarlanmıştır. RFC 4862'de tanımlandığı gibi mevcut uygulamasında SLAAC, ana bilgisayarlara DNS sunucu adresleri sağlamaz ve bu nedenle şu anda yaygın olarak benimsenmemektedir. 
+SLAAC (Durum Bilgisi Olmayan Adres Otomatik Yapılandırması): IPv6 (Internet Protocol version 6) adres yapılandırmasında kullanılan bir protokoldür. Bu protokol, bilgisayarların ağa bağlandığında otomatik olarak IPv6 adreslerini yapılandırmalarını sağlar. Stateless (durumsuz) olarak adlandırılmasının sebebi, bu protokolün ağdaki diğer cihazlar veya bir merkezi sunucu tarafından yönetilen bir durum bilgisine ihtiyaç duymadan çalışabilmesidir.
 
 
-## IPv6 Adres Gösterimi
+## SLAAC Nedir
+SLAAC, Durum Bilgisi Olmayan Adres Otomatik Yapılandırması anlamına gelir ve adı, ne yaptığını hemen hemen açıklar. Hangi adresin hangi düğüme atandığını herhangi bir cihazın takip etmesine gerek kalmadan, ağdaki her ana bilgisayarın benzersiz bir IPv6 adresini otomatik olarak yapılandırmasını sağlayan bir mekanizmadır.
 
+* Durum bilgisi olan bir adres ataması, her atamanın durumunu izleyen bir sunucu veya başka bir cihazı içerir. Adres havuzunun kullanılabilirliğini izler ve yinelenen adres çakışmalarını çözer. Ayrıca her atamayı günlüğe kaydeder ve sona erme sürelerini takip eder.
+  
+* Durum bilgisi olmayan adres ataması,  hiçbir sunucunun hangi adreslerin atandığını ve bir atama için hangi adreslerin hâlâ kullanılabilir olduğunu takip edemediği anlamına gelir . Ayrıca durum bilgisi olmayan atama senaryosunda düğümler, şu mantığı izleyerek yinelenen adres çakışmalarını çözmekten sorumludur: Bir IPv6 adresi oluşturun, Yinelenen Adres Algılama'yı (DAD) çalıştırın, adres kullanımdaysa başka bir adres oluşturun ve DAD'yi yeniden çalıştırın. , vesaire.
 
-## EUI-64 Adresleme
+## SLAAC Nasıl Çalışır
+IPv6 otomatik adreslemenin nasıl çalıştığını tam olarak anlamak için, bir IPv6 düğümünün ağa bağlandığı andan benzersiz bir küresel tek noktaya yayın adresine sahip olduğu ana kadar attığı adımları izleyelim.
+
+Adım 1: Düğüm kendisini yerel bağlantı adresiyle yapılandırır
+Bir IPv6 düğümü, IPv6 etkin bir ağa bağlandığında, genellikle yaptığı ilk şey, yerel bağlantı adresiyle kendisini otomatik olarak yapılandırmaktır. Bu yerel adresin amacı, düğümün Katman 3'te yerel segmentteki diğer IPv6 cihazlarıyla iletişim kurmasını sağlamaktır. Yerel bağlantı adresini otomatik olarak yapılandırmanın en yaygın olarak benimsenen yolu, yerel bağlantı öneki FE80::/64 ile arayüzün MAC adresinden oluşturulan EUI-64 arayüz tanımlayıcısının birleştirilmesidir.
+
 IPv6'nın önemli özelliklerinden biri, yöneticinin yapılandırmasına gerek kalmadan otomatik adres atamasıdır. Bu, cihazların bir IPv6 bağlantısı üzerinden anında iletişim kurmasına olanak tanır. Bir cihaz, EUI-64 (IEEE Genişletilmiş Benzersiz Tanımlayıcı-64)  biçimini kullanarak kendisine otomatik olarak bir IPv6 adresi atayabilir. Bu adres, cihazın benzersiz 48 bitlik MAC adresinden oluşturulur. 48 bit bir IPv6 adresi oluşturmak için çok kısa olduğundan, ek onaltılık rakamlar eklenir. EUI-64, DHCP'ye veya manuel yapılandırmaya bağlı olmaksızın IPv6 adreslerinin otomatik yapılandırılmasına olanak tanır.
 IPV6 16'lık sayı sistemi(hexadecimal numbering ) kullanır.Aşağıda hexadecimal numbering tablosu verilmiştir.
 
