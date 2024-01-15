@@ -43,7 +43,7 @@ SLAAC, Durum Bilgisi Olmayan Adres Otomatik Yapılandırması anlamına gelir ve
 ## SLAAC Nasıl Çalışır
 IPv6 otomatik adreslemenin nasıl çalıştığını tam olarak anlamak için, bir IPv6 düğümünün ağa bağlandığı andan benzersiz bir küresel tek noktaya yayın adresine sahip olduğu ana kadar attığı adımları izleyelim.
 
-Adım 1: Düğüm kendisini yerel bağlantı adresiyle yapılandırır
+#### Adım 1: Düğüm kendisini yerel bağlantı adresiyle yapılandırır
 Bir IPv6 düğümü, IPv6 etkin bir ağa bağlandığında, genellikle yaptığı ilk şey, yerel bağlantı adresiyle kendisini otomatik olarak yapılandırmaktır. Bu yerel adresin amacı, düğümün Katman 3'te yerel segmentteki diğer IPv6 cihazlarıyla iletişim kurmasını sağlamaktır. Yerel bağlantı adresini otomatik olarak yapılandırmanın en yaygın olarak benimsenen yolu, yerel bağlantı öneki FE80::/64 ile arayüzün MAC adresinden oluşturulan EUI-64 arayüz tanımlayıcısının birleştirilmesidir.
 
 IPv6'nın önemli özelliklerinden biri, yöneticinin yapılandırmasına gerek kalmadan otomatik adres atamasıdır. Bu, cihazların bir IPv6 bağlantısı üzerinden anında iletişim kurmasına olanak tanır. Bir cihaz, EUI-64 (IEEE Genişletilmiş Benzersiz Tanımlayıcı-64)  biçimini kullanarak kendisine otomatik olarak bir IPv6 adresi atayabilir. Bu adres, cihazın benzersiz 48 bitlik MAC adresinden oluşturulur. 48 bit bir IPv6 adresi oluşturmak için çok kısa olduğundan, ek onaltılık rakamlar eklenir. EUI-64, DHCP'ye veya manuel yapılandırmaya bağlı olmaksızın IPv6 adreslerinin otomatik yapılandırılmasına olanak tanır.
@@ -60,4 +60,7 @@ Yukarıdaki maddelerde anlatılan içerikle ilgili örnek aşağıda gösterilmi
 
 ![1](https://github.com/sumeyyaakbulut/IP/assets/62395974/6ab12451-5a47-4d3d-9a39-5f75ec3fd6a1)
 
+#### Adım 2: Düğüm Yinelenen Adres Algılama (DAD) işlemini gerçekleştirir
+IPv6 ana bilgisayarının yerel bağlantı adresi otomatik olarak yapılandırıldıktan sonra, adresin yerel segmentte gerçekten benzersiz olduğundan emin olması gerekir. Başka bir düğümün aynı adrese sahip olma ihtimali çok zayıf olmasına rağmen. Yinelenen Adres Algılama (DAD) adı verilen bir işlemi gerçekleştirmesi gerekir.
 
+DAD , talep edilen düğüm çok noktaya yayın adı verilen özel bir adres türünü içeren bir mekanizmadır . Bir IPv6 adresi yapılandırıldıktan sonra her düğüm, FF02::1:FFxx:xxxx adresiyle tanımlanan bir çok noktaya yayın grubuna katılır; burada xx:xxxx, IPv6 tek noktaya yayın adresindeki son 6 onaltılık değerdir. Bu nedenle, yapılandırılmış her tek noktaya yayın adresi için, ister yerel bağlantı ister genel olsun, ana bilgisayar, ilgili otomatik olarak oluşturulan istenen düğüm çok noktaya yayın grubuna katılır.
