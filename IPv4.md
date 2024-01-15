@@ -21,6 +21,18 @@ IP Adresi sınıfları içerir. Genel olarak, IPv4 Adresleme sistemi beş IP Adr
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/c571e003-7623-4fd7-bb81-5c5fac832263)
 
+* A Sınıfı: İlk bit her zaman 0 olmalıdır.
+* B Sınıf : İlk 2 bit her zaman 10 olmalıdır.
+* C Sınıfı: İlk 3 bit her zaman 110 olmalıdır.
+* D Sınıfı: ilk sekizlinin ilk dört biti 1110 olmalıdır.
+* 
+Peki sahip olduğumuz aralıklar tam olarak nedir?
+
+* A Sınıfı: 0.0.0.0 –   126.255.255.255
+* B Sınıfı: 128.0.0.0 – 191.255.255.255
+* C Sınıfı: 192.0.0.0 – 223.255.255.255
+* D Sınıfı: 224.0.0.0 - 239.255.255.255
+* E Sınıfı: 240.0.0.0 - 255.255.255.254
 
 ### IPv4'ün Bölümleri
 #### Network Kısmı : Ağ kısmı, ağa atanan ayırt edici çeşitliliği belirtir. Ağ kısmı, atanan ağın kategorisini birlikte tanımlar.
