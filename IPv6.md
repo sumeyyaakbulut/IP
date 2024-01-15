@@ -94,11 +94,12 @@ Yönlendirici Reklamı başlığında bu sorunu çözmek için tasarlanmış bir
 Yönlendirici Reklam Bayrakları
 Yukarıda da söylediğimiz gibi SLAAC varsayılan olarak DNS sağlamaz. Ve DNS olmadan, URL adreslerinden IP'ye çözümleme gerektiren birçok hizmet çalışmayacaktır. RA mesajında, düğümlerin IPv6 adresini ve DNS bilgilerini nereden alabileceklerini anlamalarına yardımcı olan bir alan vardır. 
 
-IPv6 Header
+### IPv6 Header
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/d45e4e0a-9708-42ac-9b4f-0312dc3fdb9f)
 
-IPv4 Header
+### IPv4 Header
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/09616394-df1f-4620-82ed-161b7bee3e7d)
 
+* Version:Bu, pakette kullanılan IP tipini tanımlayan 4 bitlik bir alandır.
