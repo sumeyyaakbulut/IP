@@ -6,6 +6,8 @@ Network kısmı bize IP adresinin hangi “ağa” ait olacağını söyleyecekt
 Yerel ağlarda çoğunlukla kullanılan 192.168.1.1 ip adresinin ilk 3 byte network, son byte ise host gösterir.Ama neden ilk 3 byte network kısmı ve neden son byte host dedik?
 IP adresimiz 192.168.1.1, 255.255.255.0 alt ağ maskesiyle birlikte gelir. Alt ağ maskesi(subnet mask) bilgisayarınıza hangi bölümün “network” bölümü, hangisinin “host” bölümü olduğunu söyler. İsmine rağmen hiçbir şeyi “saklamaz” veya “maskelemez”.
 
+![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
+
 
 ### IPv4'ün Bölümleri
 #### Network Kısmı : Ağ kısmı, ağa atanan ayırt edici çeşitliliği belirtir. Ağ kısmı, atanan ağın kategorisini birlikte tanımlar.
