@@ -45,8 +45,3 @@ Peki sahip olduğumuz aralıklar tam olarak nedir?
 * D Sınıfı: 224.0.0.0 - 239.255.255.255
 * E Sınıfı: 240.0.0.0 - 255.255.255.254
 
-### IPv4'ün Bölümleri
-#### Network Kısmı : Ağ kısmı, ağa atanan ayırt edici çeşitliliği belirtir. Ağ kısmı, atanan ağın kategorisini birlikte tanımlar.
-#### Host Part: Ana bilgisayar parçası, ağınızdaki makineyi benzersiz şekilde tanımlar. IPv4 adresinin bu kısmı her ana bilgisayara atanır. 
-Ağdaki her ana bilgisayar için ağ kısmı aynıdır ancak ana bilgisayarın yarısı farklılık göstermelidir.
-#### Alt ağ numarası: Bu IPv4'ün zorunlu olmayan kısmıdır. Çok sayıda ana bilgisayara sahip yerel ağlar, alt ağlara bölünür ve bunlara alt ağ numaraları atanır.
