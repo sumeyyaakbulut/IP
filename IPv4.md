@@ -6,6 +6,17 @@ Network kısmı bize IP adresinin hangi “ağa” ait olacağını söyleyecekt
 Yerel ağlarda çoğunlukla kullanılan 192.168.1.1 ip adresinin ilk 3 byte network, son byte ise host gösterir.Ama neden ilk 3 byte network kısmı ve neden son byte host dedik?
 IP adresimiz 192.168.1.1, 255.255.255.0 alt ağ maskesiyle birlikte gelir. Alt ağ maskesi(subnet mask) bilgisayarınıza hangi bölümün “network” bölümü, hangisinin “host” bölümü olduğunu söyler. İsmine rağmen hiçbir şeyi “saklamaz” veya “maskelemez”.
 
+### IPv4'ün Özellikleri
+* IPv4, 32 Bitlik bir IP Adresi olabilir.
+* IPv4 sayısal bir adres olabilir ve bitleri bir noktayla ayrılmıştır.
+* Başlık alanlarının sayısı on iki, başlık alanının uzunluğu ise yirmidir.
+* Tek noktaya yayın, yayın ve çok noktaya yayın tarzı adreslere sahiptir.
+* IPv4, VLSM'yi (Sanal Uzunluk Alt Ağ Maskesi) destekler.
+* IPv4, MAC adresini eşleştirmek için Posta Adresi Çözümleme Protokolünü kullanır.
+* RIP, yönlendirilen arka plan programı tarafından desteklenen bir yönlendirme protokolü olabilir.
+* Ağların manuel olarak veya DHCP ile tasarlanması gerekmektedir.
+* Paket parçalanmasına yönlendiricilerden ve ana bilgisayardan izin veriliyor.
+
 IPv4 paketine göz atalım:
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
