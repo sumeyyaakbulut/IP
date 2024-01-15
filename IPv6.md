@@ -102,4 +102,8 @@ Yukarıda da söylediğimiz gibi SLAAC varsayılan olarak DNS sağlamaz. Ve DNS 
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/09616394-df1f-4620-82ed-161b7bee3e7d)
 
-* Version:Bu, pakette kullanılan IP tipini tanımlayan 4 bitlik bir alandır.
+IPv6 Header:
+* Version: Bu, pakette kullanılan IP tipini tanımlayan 4 bitlik bir alandır.
+* Traffic Class: Bu 8 bitlik bir alandır. Bu, IPv4 başlığındaki Type Of Services alanına benzer. İlk 6 bit bu paket için gereken hizmeti temsil eder ve son 2 bit ECN (Açık Tıkanıklık Bildirimi) için kullanılır.
+* Flow Label (20 bit): Bu etiket, bir iletişime ait paketlerin sıralı akışını sağlamak için kullanılır. Kaynak, yönlendiricinin belirli bir paketin belirli bir bilgi akışına ait olduğunu belirlemesine yardımcı olmak için diziyi etiketler. Bu alan veri paketlerinin yeniden sıralanmasını önlemeye yardımcı olur. Akış/gerçek zamanlı medya için tasarlanmıştır.
+* 
