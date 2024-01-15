@@ -106,4 +106,8 @@ IPv6 Header:
 * Version: Bu, pakette kullanılan IP tipini tanımlayan 4 bitlik bir alandır.
 * Traffic Class: Bu 8 bitlik bir alandır. Bu, IPv4 başlığındaki Type Of Services alanına benzer. İlk 6 bit bu paket için gereken hizmeti temsil eder ve son 2 bit ECN (Açık Tıkanıklık Bildirimi) için kullanılır.
 * Flow Label (20 bit): Bu etiket, bir iletişime ait paketlerin sıralı akışını sağlamak için kullanılır. Kaynak, yönlendiricinin belirli bir paketin belirli bir bilgi akışına ait olduğunu belirlemesine yardımcı olmak için diziyi etiketler. Bu alan veri paketlerinin yeniden sıralanmasını önlemeye yardımcı olur. Akış/gerçek zamanlı medya için tasarlanmıştır.
-* 
+* Payload Length: IPv6 Yükü alanı, herhangi bir IPv6 Uzantısı başlığını içeren bir paketin veri bölümünün bayt cinsinden uzunluğunu belirten 16 bitlik bir tanımlayıcıdır. Buna karşılık, IPv4 Total Length alanı, IPv4 başlığı da dahil olmak üzere tüm IP paketinin uzunluğunu ölçer.
+* Next Header: İlk uzantı başlığının türünü (varsa) veya veri yükündeki TCP, UDP veya ICMPv6 gibi üst katman protokolünü belirten 8 bitlik bir alandır. Alan, IPv4 Protokolü alanına benzer ancak bazı ek seçeneklere sahiptir. Bir üst katman protokolünü belirtirken IPv6 Sonraki Başlık alanı, IPv4 Protocol kullanılan değerlerin aynısını kullanır.
+* Hop Limit (8-bit): Bu alan paketin ağda sonsuz döngüye girmesini durdurmak için kullanılır. Bu, IPv4'teki TTL ile aynıdır. Hop Limit alanının değeri, bir linkten (yönlendirici/atlama) geçerken 1 azaltılır. Alan 0'a ulaştığında paket atılır.
+* Source Address (128 bit): Bu alan paketi oluşturanın adresini belirtir.
+* Destination Address (128 bit): Bu alan, paketin hedeflenen alıcısının adresini sağlar.
