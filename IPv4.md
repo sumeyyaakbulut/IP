@@ -14,15 +14,23 @@ Son byte (8 bit), ise "host" kısmını temsil eder. Bu kısım, ağ içindeki b
 Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısmı, hangisinin "host" kısmı olduğunu belirler. Örneğin, 255.255.255.0 alt ağ maskesi, ilk 3 byte'ın "network" kısmını belirler, geriye kalan son byte'ın ise "host" kısmını. Yani, alt ağ maskesi, IP adresinin hangi kısmının ağ bilgisini, hangi kısmının ise cihazın benzersiz kimliğini temsil ettiğini gösterir.
 
 ### IPv4'ün Özellikleri
-* IPv4, 32 Bitlik bir IP Adresi olabilir.
-* IPv4 sayısal bir adres olabilir ve bitleri bir noktayla ayrılmıştır.
-* Başlık alanlarının sayısı on iki, başlık alanının uzunluğu ise yirmidir.
-* Tek noktaya yayın, yayın ve çok noktaya yayın tarzı adreslere sahiptir.
-* IPv4, VLSM'yi (Sanal Uzunluk Alt Ağ Maskesi) destekler.
-* IPv4, MAC adresini eşleştirmek için Posta Adresi Çözümleme Protokolünü kullanır.
-* RIP, yönlendirilen arka plan programı tarafından desteklenen bir yönlendirme protokolü olabilir.
-* Ağların manuel olarak veya DHCP ile tasarlanması gerekmektedir.
-* Paket parçalanmasına yönlendiricilerden ve ana bilgisayardan izin veriliyor.
+* 32 Bitlik IP Adresi: IPv4, 32 bit uzunluğunda IP adresleri kullanır. Bu, teorik olarak yaklaşık 4.3 milyar benzersiz IP adresi sağlar.
+ 
+* Sayısal ve Noktayla Ayrılmış Adres: IPv4 adresleri, sayısal bir formatta yazılır ve bitleri bir nokta ile ayrılmıştır. Örneğin, 192.168.1.1.
+  
+* 12 Başlık Alanı ve 20 Byte Uzunluğu: IPv4 başlığı 12 adet alan içerir ve toplam uzunluğu 20 bytedir. Başlık, paketin yönlendirilmesi ve hedefe ulaştırılması için gerekli bilgileri içerir.
+  
+* Tek, Yayın ve Çok Noktaya Yayın Adresleri: IPv4, tek noktaya yayın, yayın ve çok noktaya yayın tarzında adreslere sahiptir. Bu, özellikle ağ iletişiminde belirli amaçlar için kullanılır.
+  
+* VLSM (Sanal Uzunluk Alt Ağ Maskesi) Desteği: IPv4, VLSM'yi destekler. Bu, farklı alt ağların farklı uzunluklarda alt ağ maskeleri kullanmasını sağlar.
+
+* Posta Adresi Çözümleme Protokolü (ARP): ARP, IPv4'ün MAC adresini IP adresi ile eşleştirmek için kullanılan bir protokoldür. Bu, veri iletimi sırasında ağdaki cihazların birbirini tanımasını sağlar.
+
+* RIP Protokolü Desteği: RIP (Routing Information Protocol), IPv4 ağlarda kullanılan bir yönlendirme protokolüdür. RIP, yönlendirilen arka plan programları tarafından desteklenir.
+  
+* Manuel veya DHCP ile Ağ Tasarımı: IPv4 ağları, IP adreslerinin elle atanması veya DHCP (Dynamic Host Configuration Protocol) kullanılarak otomatik olarak dağıtılması gibi yöntemlerle tasarlanabilir.
+  
+* Paket Parçalanması: IPv4, paketlerin yönlendiricilerden ve ana bilgisayarlardan parçalanmasına izin verir. Bu, farklı ağlarda farklı iletim kontrol protokollerini kullanabilmesini sağlar.
 
 IPv4 paketine göz atalım:
 
