@@ -32,6 +32,12 @@ Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısm�
   
 * Paket Parçalanması: IPv4, paketlerin yönlendiricilerden ve ana bilgisayarlardan parçalanmasına izin verir. Bu, farklı ağlarda farklı iletim kontrol protokollerini kullanabilmesini sağlar.
 
+### Adres Çözümleme Protokolü (ARP) Nasıl Çalışır?
+Çoğu bilgisayar programı, iletişim kurmak veya bilgi alışverişi yapmak için mantıksal adresler olarak bilinen IP adreslerini kullanır. Ancak, gerçek iletişim OSI modelinin ikinci katmanındaki Fiziksel Adresler (MAC Adresi) üzerinden gerçekleşir. Bu nedenle, cihazların birbirleriyle etkileşimde bulunabilmesi için hedef MAC adresini almak önemlidir.
+
+Bu noktada devreye ARP (Address Resolution Protocol) girer. ARP'nin temel işlevi, IP adreslerini Fiziksel Adreslere çevirmektir. Yani, bir cihaz diğer bir cihazla iletişim kurmak istediğinde, ARP protokolü, hedef cihazın IP adresini alır ve bu IP adresini karşılık gelen Fiziksel Adres (MAC adresi) ile eşleştirir.
+
+
 IPv4 paketine göz atalım:
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
