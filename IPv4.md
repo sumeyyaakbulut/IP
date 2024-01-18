@@ -41,6 +41,8 @@ Source Address: Burada bu IP paketini oluşturan cihazın IP adresini bulunur.
 Destination Address: IP paketini alması gereken cihazın IP adresidir.
 
 IP adresine 8 bitlik bloklara gösterimi aşağıdadır.
+
+
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/eeb8350c-81a8-4ec9-aee6-94f63c9ba8ad)
 
 IP Adresi sınıfları içerir. Genel olarak, IPv4 Adresleme sistemi beş IP Adresi sınıfına bölünmüştür. Beş sınıfın tamamı IP Adresinin ilk sekizlisiyle tanımlanır.
