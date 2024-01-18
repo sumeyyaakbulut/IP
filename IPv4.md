@@ -1,10 +1,17 @@
-# IPv4
-IP, İnternet Protokolü anlamına gelir ve v4, Sürüm Dört (IPv4) anlamına gelir. Bir IP adresi 32 bittir ve network kısmı ve host bilgisayar kısmı olmak üzere 2 bölümden oluşur.IP adresi 32 bittir ancak biz onu 8 bitlik 4 blok halinde yazıyoruz. 
+### IPv4 Nedir
+IP, İnternet Protokolü'nü temsil eder ve IPv4, Sürüm Dört anlamına gelir.Bir IPv4 adresi 32 bittir ve network ve host kısmı olmak üzere 2 bölümden oluşur. IPv4 32, 8 bitlik 4 blok halinde yazılır.
 
-Network kısmı bize IP adresinin hangi “ağa” ait olacağını söyleyecektir, bunu bir telefon numarasının şehir veya alan koduyla karşılaştırabilirsiniz. Host (Ana bilgisayar) kısmı ağ cihazını benzersiz şekilde tanımlar; bunlar telefon numaranızın son rakamları gibidir.
+### IPv4 Yapısı
+IP adresi, iki temel bileşen içerir: network (ağ) kısmı ve host (ana bilgisayar) kısmı. Network kısmı, IP adresinin hangi ağa ait olduğunu belirtir ve bu, telefon numarasının şehir veya alan koduna benzetilebilir. Host kısmı ise ağdaki cihazı benzersiz bir şekilde tanımlar, bu da telefon numarasının son rakamlarına benzetilebilir
 
-Yerel ağlarda çoğunlukla kullanılan 192.168.1.1 ip adresinin ilk 3 byte network, son byte ise host gösterir.Ama neden ilk 3 byte network kısmı ve neden son byte host dedik?
-IP adresimiz 192.168.1.1, 255.255.255.0 alt ağ maskesiyle birlikte gelir. Alt ağ maskesi(subnet mask) bilgisayarınıza hangi bölümün “network” bölümü, hangisinin “host” bölümü olduğunu söyler. İsmine rağmen hiçbir şeyi “saklamaz” veya “maskelemez”.
+### Alt Ağ Maskesi(Subnet Mask)
+Örneğin, yerel ağlarda yaygın olarak kullanılan 192.168.1.1 IP adresi, 255.255.255.0 alt ağ maskesiyle birlikte gelir.
+
+Bu IP adresinin ilk 3 byte'ı (24 bit) "network" kısmını temsil eder. Bu kısım, cihazın hangi ağa ait olduğunu belirtir ve genellikle tüm cihazlar aynı ağ içerisinde bulunur. Bu benzetmeye telefon numarası örneğinden devam edecek olursak, ilk 3 byte, bir şehir veya bölge kodunu temsil eder.
+
+Son byte (8 bit), ise "host" kısmını temsil eder. Bu kısım, ağ içindeki bir cihazı benzersiz bir şekilde tanımlar. Bu, telefon numarasının son rakamları gibi, belirli bir ağ içindeki bir cihazı belirlemek için kullanılır.
+
+Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısmı, hangisinin "host" kısmı olduğunu belirler. Örneğin, 255.255.255.0 alt ağ maskesi, ilk 3 byte'ın "network" kısmını belirler, geriye kalan son byte'ın ise "host" kısmını. Yani, alt ağ maskesi, IP adresinin hangi kısmının ağ bilgisini, hangi kısmının ise cihazın benzersiz kimliğini temsil ettiğini gösterir.
 
 ### IPv4'ün Özellikleri
 * IPv4, 32 Bitlik bir IP Adresi olabilir.
