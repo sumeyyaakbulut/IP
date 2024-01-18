@@ -32,7 +32,7 @@ Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısm�
   
 * Paket Parçalanması: IPv4, paketlerin yönlendiricilerden ve ana bilgisayarlardan parçalanmasına izin verir. Bu, farklı ağlarda farklı iletim kontrol protokollerini kullanabilmesini sağlar.
 
-### Adres Çözümleme Protokolü (ARP) Nasıl Çalışır?
+### Adres Çözümleme Protokolü (ARP)
 Çoğu bilgisayar programı, iletişim kurmak veya bilgi alışverişi yapmak için mantıksal adresler olarak bilinen IP adreslerini kullanır. Ancak, gerçek iletişim OSI modelinin ikinci katmanındaki Fiziksel Adresler (MAC Adresi) üzerinden gerçekleşir. Bu nedenle, cihazların birbirleriyle etkileşimde bulunabilmesi için hedef MAC adresini almak önemlidir.
 
 Bu noktada devreye ARP (Address Resolution Protocol) girer. ARP'nin temel işlevi, IP adreslerini Fiziksel Adreslere çevirmektir. Yani, bir cihaz diğer bir cihazla iletişim kurmak istediğinde, ARP protokolü, hedef cihazın IP adresini alır ve bu IP adresini karşılık gelen Fiziksel Adres (MAC adresi) ile eşleştirir.
@@ -49,6 +49,13 @@ Proxy Adresi Çözümleme Protokolü, yönlendirici aracılığıyla aynı IP'ye
 
 #### Inverse ARP
 Ters Adres Çözümleme Protokolü, IP Adresini bulmak için MAC Adresini kullanır; Ters ARP, ARP'nin tam tersi olduğu şeklinde basitçe gösterilebilir. ATM (Asenkron Aktarım Modu) Ağlarında varsayılan olarak Ters ARP kullanılır. Ters ARP, Katman 2 Adreslerinden Katman 3 Adreslerini bulmaya yardımcı olur.
+
+### ARP Nasıl Çalışır
+Kaynak ağdaki tüm cihazlara bir paket yayınladığında, bu yayın, ağdaki cihazlar tarafından alınır. Her bir cihaz, Protokol Veri Birimi (PDU) olarak adlandırılan çerçeveden veri bağlantı katmanının başlığını çıkarır. Ardından, bu paket, ağ kimliği hedef IP adresleriyle doğrulandığı ağ katmanına (OSI'nin 3. katmanı) iletilir.
+
+Paketin ağ kimliği, eğer eşleşiyorsa, hedef cihazın MAC adresine yanıt verir; aksi takdirde, paket ağın ağ geçidine iletilir. Ağ geçidi, bağlı olduğu cihazlara paketi yayınlayarak ağ kimliğini doğrular.
+
+Bu süreç, paketin hedefe ulaşana kadar devam eder. Yoldaki son ikinci ağ cihazı, hedefe ulaştığında, ARP (Address Resolution Protocol) devreye girer ve hedef MAC adresiyle yanıt verir. Bu süreç, ağda gezinirken, her bir ağ cihazının paketi doğrulamasını ve yönlendirmesini sağlar.
 
 IPv4 paketine göz atalım:
 
