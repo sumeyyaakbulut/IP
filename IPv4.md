@@ -38,6 +38,19 @@ Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısm�
 Bu noktada devreye ARP (Address Resolution Protocol) girer. ARP'nin temel işlevi, IP adreslerini Fiziksel Adreslere çevirmektir. Yani, bir cihaz diğer bir cihazla iletişim kurmak istediğinde, ARP protokolü, hedef cihazın IP adresini alır ve bu IP adresini karşılık gelen Fiziksel Adres (MAC adresi) ile eşleştirir.
 
 
+![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/83c870f1-b594-4bce-a833-a237ae2c4323)
+
+### ARP ile İlişkili Önemli Terimler
+
+#### Reverse ARP
+Reverse ARP (Ters Adres Çözümleme Protokolü), yerel alan ağlarında (LAN), istemci makineler tarafından Yönlendiricinin ARP Tablosundan IP Adresi (IPv4) istemek için kullanılan bir protokoldür. Ne zaman yeni bir makine gelse, bunun kullanımı için bir IP Adresi gerekir. Bu durumda makine, gönderen ve alıcı donanım alanında MAC Adresini içeren bir RARP yayın paketi gönderir.
+
+#### Proxy ARP
+Proxy Adresi Çözümleme Protokolü, yönlendirici aracılığıyla aynı IP'ye bağlanan ağ bölümlerine ayrılmış cihazların IP Adresini MAC Adresine çözümlemesini sağlamak için çalışır. Proxy ARP etkinleştirilir, böylece 'proxy yönlendirici', yayının adreslendiği istenen yönlendirici olduğundan, yerel bir ağdaki MAC adresiyle birlikte bulunur. Göndericinin Proxy Router'ın MAC Adresini alması durumunda, datagramı hedef cihaza gönderilecek olan Proxy Router'a gönderecektir.
+
+#### Inverse ARP
+Ters Adres Çözümleme Protokolü, IP Adresini bulmak için MAC Adresini kullanır; Ters ARP, ARP'nin tam tersi olduğu şeklinde basitçe gösterilebilir. ATM (Asenkron Aktarım Modu) Ağlarında varsayılan olarak Ters ARP kullanılır. Ters ARP, Katman 2 Adreslerinden Katman 3 Adreslerini bulmaya yardımcı olur.
+
 IPv4 paketine göz atalım:
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
