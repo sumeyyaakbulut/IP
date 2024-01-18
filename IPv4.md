@@ -36,9 +36,37 @@ IPv4 paketine göz atalım:
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
 
+SÜRÜM: IP protokolünün sürümü (4 bit), IPv4 için 4'tür. 
+
+HLEN: IP başlık uzunluğu (4 bit), başlıktaki 32 bitlik kelimelerin sayısıdır. Bu alanın minimum değeri 5, maksimum değeri 15'tir. 
+
+Hizmet türü: Düşük Gecikme, Yüksek Verim, Güvenilirlik (8 bit) 
+
+Toplam Uzunluk: Minimum değeri 20 bayt ve maksimum değeri 65.535 bayt olan başlık + Veri (16 bit) uzunluğu. 
+
+Tanımlama: Tek bir IP datagramının (16 bit) parça grubunu tanımlamak için Benzersiz Paket Kimliği 
+
+Bayraklar: Her biri 1 bitlik 3 bayrak: ayrılmış bit (sıfır olmalıdır), parçalanma bayrağı, daha fazla parça bayrağı (aynı sıra) 
+
+Parça Ofseti: Belirli Datagramdaki belirli parçanın önündeki Veri Baytlarının sayısını temsil eder. Maksimum değeri 65.528 bayt olan 8 bayt sayısı cinsinden belirtilir. 
+
+Yaşam Süresi: Datagram'ın ömrü (8 bit), Bir Paketin Hedefe teslim edilmeden önce aldığı Hop sayısını kısıtlayarak datagramın ağ üzerinden döngü yapmasını engeller.
+
+Protokol: Verinin aktarılacağı protokolün adı (8 bit) 
+
+Başlık Sağlama Toplamı: Datagram başlığındaki hataları kontrol etmek için 16 bitlik başlık sağlama toplamı 
+
+Kaynak IP adresi: Gönderenin 32 bit IP adresi 
+
+Hedef IP adresi: Alıcının 32 bit IP adresi 
+
+Seçenek: Kaynak rotası, kayıt rotası gibi isteğe bağlı bilgiler. Ağ yöneticisi tarafından bir yolun çalışıp çalışmadığını kontrol etmek için kullanılır.
+
+***
 Protocol: Burada IP'nin yanı sıra hangi protokolü kullandığımızı bulacaksınız. Hangi aktarım katmanı protokolünü kullandığımızı bu şekilde belirleriz. Yani burada TCP, UDP veya belki başka bir şey bulacaksınız.
 Source Address: Burada bu IP paketini oluşturan cihazın IP adresini bulunur.
 Destination Address: IP paketini alması gereken cihazın IP adresidir.
+***
 
 IP adresine 8 bitlik bloklara gösterimi aşağıdadır.
 
