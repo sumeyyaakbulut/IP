@@ -37,8 +37,7 @@ Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısm�
 
 Bu noktada devreye ARP (Address Resolution Protocol) girer. ARP'nin temel işlevi, IP adreslerini Fiziksel Adreslere çevirmektir. Yani, bir cihaz diğer bir cihazla iletişim kurmak istediğinde, ARP protokolü, hedef cihazın IP adresini alır ve bu IP adresini karşılık gelen Fiziksel Adres (MAC adresi) ile eşleştirir.
 
-
-![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/83c870f1-b594-4bce-a833-a237ae2c4323)
+![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/4ea9fe2b-3cd5-42bf-98a2-585cd03d79e7)
 
 ### ARP ile İlişkili Önemli Terimler
 
