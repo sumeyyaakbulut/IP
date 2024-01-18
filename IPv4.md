@@ -57,6 +57,15 @@ Paketin ağ kimliği, eğer eşleşiyorsa, hedef cihazın MAC adresine yanıt ve
 
 Bu süreç, paketin hedefe ulaşana kadar devam eder. Yoldaki son ikinci ağ cihazı, hedefe ulaştığında, ARP (Address Resolution Protocol) devreye girer ve hedef MAC adresiyle yanıt verir. Bu süreç, ağda gezinirken, her bir ağ cihazının paketi doğrulamasını ve yönlendirmesini sağlar.
 
+1- ARP Önbelleği: MAC adresini çözümledikten sonra ARP, onu gelecekte referans olarak kullanılmak üzere bir tabloda saklandığı kaynağa gönderir. Sonraki iletişimlerde tablodaki MAC adresi kullanılabilir.
+
+2- ARP Cache Timeout: ARP önbelleğindeki MAC adresinin kalabileceği süreyi belirtir.
+
+3- ARP isteği: Bu, hedef MAC adresine rastlayıp rastlamadığımızı doğrulamak için ağ üzerinden bir paket yayınlamaktan başka bir şey değildir. Gönderenin fiziksel adresi. Gönderenin IP adresi. Alıcının fiziksel adresi FF:FF:FF:FF:FF: FF veya 1’lerdir. Alıcının IP adresi.
+
+4- ARP yanıtı/yanıtı: Kaynağın hedeften aldığı ve verilerin daha fazla iletişimine yardımcı olan MAC adresi yanıtıdır. 
+
+
 IPv4 paketine göz atalım:
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
