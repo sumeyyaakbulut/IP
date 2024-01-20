@@ -137,3 +137,16 @@ IPv6 (Unicast Addresses)Tek Noktaya Yayın Adresleri, tek bir arayüzü tanımla
 * Format: Geridöngü adresi ::1/128.
 * Kapsam: Cihazın yereli.
 * Amaç: Yerel cihazdaki iletişimi test etmek için kullanılan IPv4 127.0.0.1'e eşdeğerdir. Bir cihazın ağ arayüzü kullanmadan paket gönderip almasına olanak tanır.
+
+#### 2. Multicast Addresses :
+Ağ çok noktaya yayın, bir düğümün paketleri aynı anda birden çok hedefe (birden çoğa) gönderdiği bir tekniktir. Hedefler aslında  çok noktaya yayın grubu olarak bilinen tek bir çok noktaya yayın adresiyle tanımlanan bir dizi arabirimdir.
+
+IPv6'da çok noktaya yayın adresleri, adreslerin en soldaki 8 bitinin değeriyle diğer tüm türlerden ayrılır: 11111111 değeri (onaltılık basamak FF), adresin çok noktaya yayın olduğunu tanımlar. Bu nedenle, tüm çok noktaya yayın adresleri, 224.0.0.0/4 IPv4 çok noktaya yayın adres alanına eşdeğer olan ff00::/8 önekinin bir parçasıdır. IPv4 ve IPv6 çok noktaya yayın için iki önemli kural geçerlidir:
+Çok noktaya yayın grubuna gönderilen paketlerin her zaman tek noktaya yayın kaynak adresi vardır.
+Çok noktaya yayın adresi bir paketin kaynak adresi olamaz.
+IPv6'da yayın adresleri yoktur. Bunun yerine, IPv6'da bu işlevsellik, tüm IPv6 aygıtlarının çok noktaya yayın adresi ve istenen düğüm çok noktaya yayın adresi gibi özel çok noktaya yayın grupları kullanılarak yapılır.
+
+#### 2.1. Well-Known
+IPv4'te 224.0.0.0/24 aralığında iyi bilinen birkaç çok noktaya yayın adresi vardır. İyi bilinen, bu adreslerin önceden tanımlanmış ve özel kullanım için ayrılmış olduğu anlamına gelir.
+
+IPv6'da tüm bilinen çok noktaya yayın adresleri ff00::/12 önekiyle başlar. Bu, bir adresin onaltılık tabandaki ilk 3 rakamının her zaman ff0 olacağı anlamına gelir. Bu tür adreslerin birkaç örneği aşağıdaki tabloda gösterilmektedir:
