@@ -85,29 +85,36 @@ IPv4 paketine göz atalım:
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
 
-SÜRÜM: IP protokolünün sürümü (4 bit), IPv4 için 4'tür. 
+* Version (4 bits): IP sürümünü belirtir ve IPv4 için bu alan "4" olarak ayarlanmıştır.
+  
+* Header Length (IHL - 4 bits): IPv4 başlığının uzunluğunu 32 bitlik sözcüklerle temsil eder. Minimum değer 5 ve maksimum 15'tir.
+  
+* Type of Service (TOS) or Differentiated Services Code Point (DSCP) - 8 bits: Başlangıçta hizmet kalitesini belirlemek için tasarlanmış olup, modern ağlarda DSCP olarak yeniden tanımlanarak hizmet sınıflarının daha ayrıntılı bir tanımına olanak sağlanmıştır.
 
-HLEN: IP başlık uzunluğu (4 bit), başlıktaki 32 bitlik kelimelerin sayısıdır. Bu alanın minimum değeri 5, maksimum değeri 15'tir. 
+* Total Length (16 bits): IPv4 paketinin (başlık + veri) toplam uzunluğunu bayt cinsinden belirtir.
+  
+* Identification (16 bits): Tek bir IP datagramının bir grup parçasını benzersiz şekilde tanımlamak için kullanılır.
+  
+* Flags (3 bits): "Parçalama" (DF) bayrağını, "Daha Fazla Parça" (MF) bayrağını ve bir ayrılmış biti içerir.
 
-Hizmet türü: Düşük Gecikme, Yüksek Verim, Güvenilirlik (8 bit) 
+* Fragment Offset (13 bits): Orijinal parçalanmamış IP datagramının başlangıcına göre belirli bir parçanın uzaklığını gösterir.
 
-Toplam Uzunluk: Minimum değeri 20 bayt ve maksimum değeri 65.535 bayt olan başlık + Veri (16 bit) uzunluğu. 
+* Time to Live (TTL - 8 bits): Bir paketin atılmadan önce alabileceği maksimum atlama sayısını temsil eder.
+  
+* Protocol (8 bit): IP datagramının veri bölümünde kullanılan protokolü tanımlar. Örneğin TCP, UDP, ICMP.
 
-Tanımlama: Tek bir IP datagramının (16 bit) parça grubunu tanımlamak için Benzersiz Paket Kimliği 
+* Header Checksum (16 bits): Başlığın hata kontrolü için kullanılır. Sağlama toplamı veriler hariç yalnızca başlık üzerinden hesaplanır.
 
-Bayraklar: Her biri 1 bitlik 3 bayrak: ayrılmış bit (sıfır olmalıdır), parçalanma bayrağı, daha fazla parça bayrağı (aynı sıra) 
+* Source Address (32 bits): Paketin kaynak IP adresini belirtir.
+* Destination Address (32 bits): Paketin hedef IP adresini belirtir.
+* Options (Variable): Kayıt rotası, zaman damgası ve diğerleri gibi çeşitli seçenekleri içerebilen isteğe bağlı bir alan.
+  
+* Padding: Gerekirse başlık uzunluğunun 32 bitin katı olmasını sağlamak için dolgu eklenir.
 
-Parça Ofseti: Belirli Datagramdaki belirli parçanın önündeki Veri Baytlarının sayısını temsil eder. Maksimum değeri 65.528 bayt olan 8 bayt sayısı cinsinden belirtilir. 
 
-Yaşam Süresi: Datagram'ın ömrü (8 bit), Bir Paketin Hedefe teslim edilmeden önce aldığı Hop sayısını kısıtlayarak datagramın ağ üzerinden döngü yapmasını engeller.
 
-Protokol: Verinin aktarılacağı protokolün adı (8 bit) 
 
-Başlık Sağlama Toplamı: Datagram başlığındaki hataları kontrol etmek için 16 bitlik başlık sağlama toplamı 
 
-Kaynak IP adresi: Gönderenin 32 bit IP adresi 
-
-Hedef IP adresi: Alıcının 32 bit IP adresi 
 
 Seçenek: Kaynak rotası, kayıt rotası gibi isteğe bağlı bilgiler. Ağ yöneticisi tarafından bir yolun çalışıp çalışmadığını kontrol etmek için kullanılır.
 
