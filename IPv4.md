@@ -117,6 +117,7 @@ Hedef IP adresi: Alıcının 32 bit IP adresi
 
 Seçenek: Kaynak rotası, kayıt rotası gibi isteğe bağlı bilgiler. Ağ yöneticisi tarafından bir yolun çalışıp çalışmadığını kontrol etmek için kullanılır.
 
+
 ***
 Protocol: Burada IP'nin yanı sıra hangi protokolü kullandığımızı bulacaksınız. Hangi aktarım katmanı protokolünü kullandığımızı bu şekilde belirleriz. Yani burada TCP, UDP veya belki başka bir şey bulacaksınız.
 Source Address: Burada bu IP paketini oluşturan cihazın IP adresini bulunur.
