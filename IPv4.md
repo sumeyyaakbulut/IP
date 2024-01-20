@@ -112,19 +112,6 @@ IPv4 paketine göz atalım:
 * Padding: Gerekirse başlık uzunluğunun 32 bitin katı olmasını sağlamak için dolgu eklenir.
 
 
-
-
-
-
-Seçenek: Kaynak rotası, kayıt rotası gibi isteğe bağlı bilgiler. Ağ yöneticisi tarafından bir yolun çalışıp çalışmadığını kontrol etmek için kullanılır.
-
-
-***
-Protocol: Burada IP'nin yanı sıra hangi protokolü kullandığımızı bulacaksınız. Hangi aktarım katmanı protokolünü kullandığımızı bu şekilde belirleriz. Yani burada TCP, UDP veya belki başka bir şey bulacaksınız.
-Source Address: Burada bu IP paketini oluşturan cihazın IP adresini bulunur.
-Destination Address: IP paketini alması gereken cihazın IP adresidir.
-***
-
 IP adresine 8 bitlik bloklara gösterimi aşağıdadır.
 
 
