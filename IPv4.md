@@ -56,12 +56,6 @@ Kullanım Örneği: RARP günümüzde daha az yaygındır ancak geçmişte özel
 Kullanım Durumu: InARP, özellikle cihazların, Çerçeve Aktarmadaki belirli bir Veri Bağlantısı Bağlantı Tanımlayıcısı (DLCI) veya ATM ağlarındaki Sanal Yol Tanımlayıcısı/Sanal Kanal Tanımlayıcısı (VPI/VCI) ile ilişkili IP adresini öğrenmesi gereken durumlarda geçerlidir.
 
 ### ARP Nasıl Çalışır
-Kaynak ağdaki tüm cihazlara bir paket yayınladığında, bu yayın, ağdaki cihazlar tarafından alınır. Her bir cihaz, Protokol Veri Birimi (PDU) olarak adlandırılan çerçeveden veri bağlantı katmanının başlığını çıkarır. Ardından, bu paket, ağ kimliği hedef IP adresleriyle doğrulandığı ağ katmanına (OSI'nin 3. katmanı) iletilir.
-
-Paketin ağ kimliği, eğer eşleşiyorsa, hedef cihazın MAC adresine yanıt verir; aksi takdirde, paket ağın ağ geçidine iletilir. Ağ geçidi, bağlı olduğu cihazlara paketi yayınlayarak ağ kimliğini doğrular.
-
-Bu süreç, paketin hedefe ulaşana kadar devam eder. Yoldaki son ikinci ağ cihazı, hedefe ulaştığında, ARP (Address Resolution Protocol) devreye girer ve hedef MAC adresiyle yanıt verir. Bu süreç, ağda gezinirken, her bir ağ cihazının paketi doğrulamasını ve yönlendirmesini sağlar.
-
 1.  Başlatma( Initialization):
 Bir cihaz bir ağa bağlandığında genellikle boş bir ARP önbelleğiyle başlar. ARP önbelleği, IP adresleri ve karşılık gelen MAC adresleri arasındaki eşlemeleri saklayan bir tablodur.
 
