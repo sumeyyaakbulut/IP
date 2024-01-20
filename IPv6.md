@@ -150,3 +150,10 @@ IPv6'da yayın adresleri yoktur. Bunun yerine, IPv6'da bu işlevsellik, tüm IPv
 IPv4'te 224.0.0.0/24 aralığında iyi bilinen birkaç çok noktaya yayın adresi vardır. İyi bilinen, bu adreslerin önceden tanımlanmış ve özel kullanım için ayrılmış olduğu anlamına gelir.
 
 IPv6'da tüm bilinen çok noktaya yayın adresleri ff00::/12 önekiyle başlar. Bu, bir adresin onaltılık tabandaki ilk 3 rakamının her zaman ff0 olacağı anlamına gelir. Bu tür adreslerin birkaç örneği aşağıdaki tabloda gösterilmektedir:
+
+![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/2af9ef74-bd50-4194-ad9a-df767bcd110b)
+
+#### 2.2. Solicited-Node :
+İstenen Düğüm Çok Noktaya Yayın Adresi, etkili adres çözümlemesi için IPv6'da kullanılan özel bir çok noktaya yayın adresi türüdür. IPv6'da, IPv4'te kullanılan Adres Çözümleme Protokolü'nün (ARP), Komşu Keşif Protokolü (NDP) ile değiştirilmiştir. İstenen Düğüm Çok Noktaya Yayın Adresleri, bir hedef düğümün bağlantı katmanı adresini verimli bir şekilde çözmek için Komşu Keşif sürecinde kullanılır.
+
+İstenen Düğüm Çok Noktaya Yayın Adresinin formatı, bir IPv6 tek noktaya yayın veya herhangi bir noktaya yayın adresinin son 24 bitinden türetilir. İstenen Düğüm Çok Noktaya Yayın Adresinin öneki şeklindedir ff02:0:0:0:0:1:ff00::/104ve son 24 bit, hedef tek noktaya yayın veya herhangi bir noktaya yayın adresinden alınır.
