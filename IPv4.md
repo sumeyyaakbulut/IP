@@ -1,8 +1,8 @@
 ### IPv4 Nedir
-IP, İnternet Protokolü'nü temsil eder ve IPv4, Sürüm Dört anlamına gelir.Bir IPv4 adresi 32 bittir ve network ve host kısmı olmak üzere 2 bölümden oluşur. IPv4 32, 8 bitlik 4 blok halinde yazılır.
+IP, İnternet Protokolü'nü temsil eder ve IPv4, Sürüm Dört anlamına gelir. Bir IPv4 adresi 32 bittir ve network ve host kısmı olmak üzere 2 bölümden oluşur.
 
 ### IPv4 Yapısı
-IP adresi, iki temel bileşen içerir: network (ağ) kısmı ve host (ana bilgisayar) kısmı. Network kısmı, IP adresinin hangi ağa ait olduğunu belirtir ve bu, telefon numarasının şehir veya alan koduna benzetilebilir. Host kısmı ise ağdaki cihazı benzersiz bir şekilde tanımlar, bu da telefon numarasının son rakamlarına benzetilebilir
+IP adresi, iki temel bileşen içerir: network (ağ) kısmı ve host (ana bilgisayar) kısmından oluşur. Network kısmı, IP adresinin hangi ağa ait olduğunu belirtir ve bu, telefon numarasının şehir veya alan koduna benzetilebilir. Host kısmı ise ağdaki cihazı benzersiz bir şekilde tanımlar, bu da telefon numarasının son rakamlarına benzetilebilir.
 
 ### Alt Ağ Maskesi(Subnet Mask)
 Örneğin, yerel ağlarda yaygın olarak kullanılan 192.168.1.1 IP adresi, 255.255.255.0 alt ağ maskesiyle birlikte gelir.
