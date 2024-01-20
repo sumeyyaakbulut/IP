@@ -18,13 +18,11 @@ Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısm�
  
 * Sayısal ve Noktayla Ayrılmış Adres: IPv4 adresleri, sayısal bir formatta yazılır ve bitleri bir nokta ile ayrılmıştır. Örneğin, 192.168.1.1.
   
-* 12 Başlık Alanı ve 20 Byte Uzunluğu: IPv4 başlığı 12 adet alan içerir ve toplam uzunluğu 20 bytedir. Başlık, paketin yönlendirilmesi ve hedefe ulaştırılması için gerekli bilgileri içerir.
-  
 * Tek, Yayın ve Çok Noktaya Yayın Adresleri: IPv4, tek noktaya yayın, yayın ve çok noktaya yayın tarzında adreslere sahiptir. Bu, özellikle ağ iletişiminde belirli amaçlar için kullanılır.
   
 * VLSM (Sanal Uzunluk Alt Ağ Maskesi) Desteği: IPv4, VLSM'yi destekler. Bu, farklı alt ağların farklı uzunluklarda alt ağ maskeleri kullanmasını sağlar.
 
-* Posta Adresi Çözümleme Protokolü (ARP): ARP, IPv4'ün MAC adresini IP adresi ile eşleştirmek için kullanılan bir protokoldür. Bu, veri iletimi sırasında ağdaki cihazların birbirini tanımasını sağlar.
+* Adresi Çözümleme Protokolü (ARP): ARP, IPv4'ün MAC adresini IP adresi ile eşleştirmek için kullanılan bir protokoldür. Bu, veri iletimi sırasında ağdaki cihazların birbirini tanımasını sağlar.
 
 * RIP Protokolü Desteği: RIP (Routing Information Protocol), IPv4 ağlarda kullanılan bir yönlendirme protokolüdür. RIP, yönlendirilen arka plan programları tarafından desteklenir.
   
