@@ -112,12 +112,14 @@ ARP önbelleklerinin zaman aşımı vardır ve girişler belirli bir süre sonra
 * Padding: Gerekirse başlık uzunluğunun 32 bitin katı olmasını sağlamak için dolgu eklenir.
 
 
-IP adresine 8 bitlik bloklara gösterimi aşağıdadır.
 
+
+IP adresine 8 bitlik bloklara gösterimi aşağıdadır.
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/eeb8350c-81a8-4ec9-aee6-94f63c9ba8ad)
 
-IP Adresi sınıfları içerir. Genel olarak, IPv4 Adresleme sistemi beş IP Adresi sınıfına bölünmüştür. Beş sınıfın tamamı IP Adresinin ilk sekizlisiyle tanımlanır.
+### IPv4 address classes
+IPv4 adres alanı, A, B, C, D ve E harfleriyle gösterilen beş ana sınıfa bölünmüştür. Her sınıfın farklı bir adres aralığı vardır ve sınıflar, ağa atanan bit sayısına göre ayırt edilir ve adresin ana bilgisayar bölümleri. IPv4 adres sınıfları şunlardır:
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/c571e003-7623-4fd7-bb81-5c5fac832263)
 
@@ -134,3 +136,5 @@ Peki sahip olduğumuz aralıklar tam olarak nedir?
 * D Sınıfı: 224.0.0.0 - 239.255.255.255
 * E Sınıfı: 240.0.0.0 - 255.255.255.254
 
+* D sınıfı aynı anda birden fazla ana bilgisayara çok noktaya yayınlanması için kullanılır.
+* E sınıfı deneysel ve gelecekteki kullanım için ayrılmıştır.Genel amaçlı adresleme için tasarlanmamıştır.
