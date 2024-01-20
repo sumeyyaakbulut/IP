@@ -157,3 +157,19 @@ IPv6'da tüm bilinen çok noktaya yayın adresleri ff00::/12 önekiyle başlar. 
 İstenen Düğüm Çok Noktaya Yayın Adresi, etkili adres çözümlemesi için IPv6'da kullanılan özel bir çok noktaya yayın adresi türüdür. IPv6'da, IPv4'te kullanılan Adres Çözümleme Protokolü'nün (ARP), Komşu Keşif Protokolü (NDP) ile değiştirilmiştir. İstenen Düğüm Çok Noktaya Yayın Adresleri, bir hedef düğümün bağlantı katmanı adresini verimli bir şekilde çözmek için Komşu Keşif sürecinde kullanılır.
 
 İstenen Düğüm Çok Noktaya Yayın Adresinin formatı, bir IPv6 tek noktaya yayın veya herhangi bir noktaya yayın adresinin son 24 bitinden türetilir. İstenen Düğüm Çok Noktaya Yayın Adresinin öneki şeklindedir ff02:0:0:0:0:1:ff00::/104ve son 24 bit, hedef tek noktaya yayın veya herhangi bir noktaya yayın adresinden alınır.
+
+
+### Neighbor Discovery Protocol
+IPv6'da Adres Çözümleme Protokolü (ARP) yoktur. IPv6'dan MAC'a çözümlemenin nasıl yapılıyor? IPv6 Komşu Keşif Protokolü (Neighbor Discovery Protocol), IPv4'teki ARP'ye benzer bir rol oynar, ancak daha gelişmiş ve güvenli bir şekilde çalışır. IPv6'da ARP'nin yerini alan bu protokol, düğümlerin birbirlerinin fiziksel adreslerini çözümlemek için kullanılır. İşte IPv6 Komşu Keşif Protokolü'nün temel adımları:
+
+* Neighbor Solicitation (Komşu İsteme): Bir düğüm, bilmediği bir IPv6 adresinin MAC (Medya Erişim Kontrolü) adresini öğrenmek istediğinde, bu bilgiyi elde etmek amacıyla "Neighbor Solicitation" (NS) mesajı gönderir.
+  
+* Neighbor Advertisement (Komşu Bildirimi): Hedef IPv6 adresine sahip düğüm, NS mesajını alır ve kendi MAC adresini içeren "Neighbor Advertisement" (NA) mesajını gönderir. Bu, çözümleme sürecinin bir parçasıdır.
+  
+* Duplicate Address Detection (Adres Çakışması Algılama): IPv6'da, bir düğüm bir IPv6 adresini kullanmadan önce, bu adresin kullanımda olup olmadığını belirlemek için "Duplicate Address Detection" (DAD) sürecini yürütür. Bu, adresin benzersiz olup olmadığını kontrol etmek için NS ve NA mesajlarını içerir.
+  
+* Router Solicitation (Yönlendirici İsteme) ve Router Advertisement (Yönlendirici Bildirimi): Düğümler, ağdaki yönlendiricileri keşfetmek ve ağ yapılandırması bilgilerini almak için "Router Solicitation" (RS) ve "Router Advertisement" (RA) mesajlarını kullanabilirler.
+  
+* Redirect (Yönlendir): Bir yönlendirici, bir düğümün belirli bir hedefe daha iyi bir yol bulması durumunda, "Redirect" mesajını kullanarak düğümü yeni bir yol üzerinden yönlendirebilir.
+  
+* Multicast Kullanımı: IPv6 Komşu Keşif Protokolü, yayın yerine "Multicast" mesajlarını kullanarak iletişim kurar. Bu, ağ trafiğini düşük seviyede tutar ve daha etkin bir çözümleme süreci sağlar.
