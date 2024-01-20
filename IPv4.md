@@ -81,7 +81,7 @@ ARP önbelleği güncellendiğinde cihazlar artık doğrudan MAC adreslerini kul
 ARP önbelleklerinin zaman aşımı vardır ve girişler belirli bir süre sonra sona erer. Bu, cihazların yeni IP adresleri alması veya değiştirilmesi gibi ağdaki değişikliklere uyum sağlamaya yardımcı olur.
 
 
-IPv4 paketine göz atalım:
+### IPv4 Packet Header
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/b71354c1-cf45-4c69-924f-a89310d1fa88)
 
