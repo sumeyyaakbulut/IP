@@ -127,7 +127,7 @@ IPv4 adres alanı, A, B, C, D ve E harfleriyle gösterilen beş ana sınıfa bö
 * B Sınıf : İlk 2 bit her zaman 10 olmalıdır.
 * C Sınıfı: İlk 3 bit her zaman 110 olmalıdır.
 * D Sınıfı: ilk sekizlinin ilk dört biti 1110 olmalıdır.
-* 
+  
 Peki sahip olduğumuz aralıklar tam olarak nedir?
 
 * A Sınıfı: 0.0.0.0 –   126.255.255.255
