@@ -40,10 +40,11 @@ Bu noktada devreye ARP (Address Resolution Protocol) girer. ARP'nin temel işlev
 ### ARP ile İlişkili Önemli Terimler
 
 #### Reverse ARP
-Reverse ARP (Ters Adres Çözümleme Protokolü), yerel alan ağlarında (LAN), istemci makineler tarafından Yönlendiricinin ARP Tablosundan IP Adresi (IPv4) istemek için kullanılan bir protokoldür. Ne zaman yeni bir makine gelse, bunun kullanımı için bir IP Adresi gerekir. Bu durumda makine, gönderen ve alıcı donanım alanında MAC Adresini içeren bir RARP yayın paketi gönderir.
+RARP (Reverse Address Resolution Protocol), bir ağdaki bir cihazın MAC adresinden IP adresini çözümlemek için kullanılan bir protokoldür. Normalde, ARP (Address Resolution Protocol) kullanılarak IP adresi alınırken, RARP tam tersidir ve bir cihazın MAC adresinden başlayarak IP adresini elde etmeyi sağlar.
 
 #### Proxy ARP
-Proxy Adresi Çözümleme Protokolü, yönlendirici aracılığıyla aynı IP'ye bağlanan ağ bölümlerine ayrılmış cihazların IP Adresini MAC Adresine çözümlemesini sağlamak için çalışır. Proxy ARP etkinleştirilir, böylece 'proxy yönlendirici', yayının adreslendiği istenen yönlendirici olduğundan, yerel bir ağdaki MAC adresiyle birlikte bulunur. Göndericinin Proxy Router'ın MAC Adresini alması durumunda, datagramı hedef cihaza gönderilecek olan Proxy Router'a gönderecektir.
+Bir cihaz, belirli bir IP adresine bir çerçeve (frame) göndermeye karar verir. Ancak, bu cihaz, hedef IP adresiyle doğrudan aynı ağda (subnet) bulunmamaktadır. Yerel ağda bu IP adresini çözümlemek için normal ARP işlemi başarısız olur çünkü hedef IP adresi doğrudan erişilebilir değildir. Proxy ARP devreye girer. Proxy ARP etkinleştirilmiş bir yönlendirici, sanki hedef IP adresi aynı ağda gibi davranır ve göndericiye hedef cihazın MAC adresini verir. Gönderici, alınan MAC adresiyle çerçevesini doğrudan Proxy ARP'ya gönderir.
+Proxy ARP, alınan çerçeveyi hedef cihaza iletmek için kullanılır.
 
 #### Inverse ARP
 Ters Adres Çözümleme Protokolü, IP Adresini bulmak için MAC Adresini kullanır; Ters ARP, ARP'nin tam tersi olduğu şeklinde basitçe gösterilebilir. ATM (Asenkron Aktarım Modu) Ağlarında varsayılan olarak Ters ARP kullanılır. Ters ARP, Katman 2 Adreslerinden Katman 3 Adreslerini bulmaya yardımcı olur.
