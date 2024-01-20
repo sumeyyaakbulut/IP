@@ -115,4 +115,25 @@ IPv6 Header:
 
 ### IPv6 Adres Türleri
 
-1. Unicast Addresses : IPv6 Tek Noktaya Yayın Adresleri, tek bir arayüzü tanımlamak için kullanılır ve en yaygın IPv6 adresi türüdür. IPv6'daki tek noktaya yayın adresleri kapsamlarına ve amaçlarına göre çeşitli türlere ayrılabilir. IPv6 Tek Noktaya Yayın Adreslerinin ana türleri şunlardır:
+#### 1. Unicast Addresses :
+IPv6 (Unicast Addresses)Tek Noktaya Yayın Adresleri, tek bir arayüzü tanımlamak için kullanılır ve en yaygın IPv6 adresi türüdür. IPv6'daki tek noktaya yayın adresleri kapsamlarına ve amaçlarına göre çeşitli türlere ayrılabilir. IPv6 Tek Noktaya Yayın Adreslerinin ana türleri şunlardır:
+
+##### 1.1. Global Unicast Address
+Format: Global Tek Noktaya Yayın Adresleri prefix ile başlar 2000::/3.
+Kapsam: İnternette küresel olarak yönlendirilebilir.
+Amacı: Küresel İnternet üzerinde uçtan uca iletişim için kullanılır. Genel IPv4 adreslerine benzer.
+
+##### 1.2. Link-Local Address:
+Format: Bağlantı-Yerel Adresler prefixi ile başlar fe80::/10.
+Kapsam: Yerel ağ segmentiyle sınırlıdır.
+Amaç: Tek bir ağ segmentinde iletişim için kullanılır. Yerel bağlantı adresleri otomatik olarak yapılandırılır ve genel bir adres gerektirmez. Genellikle komşu keşfi ve otomatik yapılandırma için kullanılırlar.
+
+##### 1.3. Unique Local Unicast Address (ULA):
+Format: Benzersiz Yerel Adresler prefixi ile başlar fc00::/7.
+Kapsam: Bir kuruluş veya sitenin yereli.
+Amaç: Bir site veya kuruluş içinde yerel iletişim için kullanılan IPv4 özel adreslerine benzer. Küresel İnternet üzerinde yönlendirilemez.
+
+##### 1.4. Loopback Address:
+Format: Geridöngü adresi ::1/128.
+Kapsam: Cihazın yereli.
+Amaç: Yerel cihazdaki iletişimi test etmek için kullanılan IPv4 127.0.0.1'e eşdeğerdir. Bir cihazın ağ arayüzü kullanmadan paket gönderip almasına olanak tanır.
