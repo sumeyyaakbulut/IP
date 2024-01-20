@@ -111,3 +111,8 @@ IPv6 Header:
 * Hop Limit (8-bit): Bu alan paketin ağda sonsuz döngüye girmesini durdurmak için kullanılır. Bu, IPv4'teki TTL ile aynıdır. Hop Limit alanının değeri, bir linkten (yönlendirici/atlama) geçerken 1 azaltılır. Alan 0'a ulaştığında paket atılır.
 * Source Address (128 bit): Bu alan paketi oluşturanın adresini belirtir.
 * Destination Address (128 bit): Bu alan, paketin hedeflenen alıcısının adresini sağlar.
+
+
+### IPv6 Adres Türleri
+
+1. Unicast Addresses : IPv6 Tek Noktaya Yayın Adresleri, tek bir arayüzü tanımlamak için kullanılır ve en yaygın IPv6 adresi türüdür. IPv6'daki tek noktaya yayın adresleri kapsamlarına ve amaçlarına göre çeşitli türlere ayrılabilir. IPv6 Tek Noktaya Yayın Adreslerinin ana türleri şunlardır:
