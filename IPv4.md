@@ -62,13 +62,29 @@ Paketin ağ kimliği, eğer eşleşiyorsa, hedef cihazın MAC adresine yanıt ve
 
 Bu süreç, paketin hedefe ulaşana kadar devam eder. Yoldaki son ikinci ağ cihazı, hedefe ulaştığında, ARP (Address Resolution Protocol) devreye girer ve hedef MAC adresiyle yanıt verir. Bu süreç, ağda gezinirken, her bir ağ cihazının paketi doğrulamasını ve yönlendirmesini sağlar.
 
-1- ARP Önbelleği: MAC adresini çözümledikten sonra ARP, onu gelecekte referans olarak kullanılmak üzere bir tabloda saklandığı kaynağa gönderir. Sonraki iletişimlerde tablodaki MAC adresi kullanılabilir.
+1.  Başlatma( Initialization):
+Bir cihaz bir ağa bağlandığında genellikle boş bir ARP önbelleğiyle başlar. ARP önbelleği, IP adresleri ve karşılık gelen MAC adresleri arasındaki eşlemeleri saklayan bir tablodur.
 
-2- ARP Cache Timeout: ARP önbelleğindeki MAC adresinin kalabileceği süreyi belirtir.
+2. Adres Çözümleme İhtiyacı:
+Bir cihaz aynı ağdaki başka bir cihazla iletişim kurmak istediğinde hedef cihazın MAC adresini bilmesi gerekir. Cihazın ARP önbelleğinde MAC adresi yoksa adresi çözümlemek için ARP gerçekleştirmesi gerekir.
 
-3- ARP isteği: Bu, hedef MAC adresine rastlayıp rastlamadığımızı doğrulamak için ağ üzerinden bir paket yayınlamaktan başka bir şey değildir. Gönderenin fiziksel adresi. Gönderenin IP adresi. Alıcının fiziksel adresi FF:FF:FF:FF:FF: FF veya 1’lerdir. Alıcının IP adresi.
+3. ARP İsteği (ARP Request):
+Gönderen cihaz yerel ağa bir ARP İsteği mesajı yayınlar. Bu ARP İsteği, gönderenin MAC ve IP adreslerini ve MAC adresini bulmaya çalıştığı hedef IP adresini içerir.Yayın, gönderen cihazın hedefin MAC adresini bilmemesi ve yerel ağdaki tüm cihazların isteği duymasını istemesi nedeniyle gereklidir.
 
-4- ARP yanıtı/yanıtı: Kaynağın hedeften aldığı ve verilerin daha fazla iletişimine yardımcı olan MAC adresi yanıtıdır. 
+4. ARP İsteğinin Alınması:
+Ağdaki tüm cihazlar ARP İsteğini alır ancak yalnızca eşleşen IP adresine sahip cihaz yanıt verir.
+
+5. ARP'nin Cevabı (ARP Reply):
+Eşleşen IP adresine sahip cihaz, istekte bulunan kişiye doğrudan bir ARP Yanıtı gönderir. ARP Yanıtı gönderenin MAC adresini içerir.Orijinal istek sahibi, ARP önbelleğini alınan bilgilerle günceller.
+
+6. ARP Önbelleğe Alma (ARP Caching):
+Hem istekte bulunan hem de yanıtlayan, ARP önbelleklerini IP-MAC adres eşlemesiyle günceller. Cihazlar artık ARP sürecinden geçmeden doğrudan birbirlerine adreslenebildiğinden, bu gelecekteki iletişimlerde yardımcı olur.
+
+7. İletişim:
+ARP önbelleği güncellendiğinde cihazlar artık doğrudan MAC adreslerini kullanarak iletişim kurabilir. Bu cihazlar arasındaki sonraki iletişim, ARP önbellek girişinin süresi dolana veya açıkça temizlenene kadar ARP gerektirmez.
+
+8. ARP Önbellek Yaşlandırma (ARP Cache Aging):
+ARP önbelleklerinin zaman aşımı vardır ve girişler belirli bir süre sonra sona erer. Bu, cihazların yeni IP adresleri alması veya değiştirilmesi gibi ağdaki değişikliklere uyum sağlamaya yardımcı olur.
 
 
 IPv4 paketine göz atalım:
