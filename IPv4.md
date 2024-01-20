@@ -37,17 +37,23 @@ Bu noktada devreye ARP (Address Resolution Protocol) girer. ARP'nin temel işlev
 
 ![image](https://github.com/sumeyyaakbulut/IP/assets/62395974/4ea9fe2b-3cd5-42bf-98a2-585cd03d79e7)
 
-### ARP ile İlişkili Önemli Terimler
+### ARP Türleri
 
-#### Reverse ARP
-RARP (Reverse Address Resolution Protocol), bir ağdaki bir cihazın MAC adresinden IP adresini çözümlemek için kullanılan bir protokoldür. Normalde, ARP (Address Resolution Protocol) kullanılarak IP adresi alınırken, RARP tam tersidir ve bir cihazın MAC adresinden başlayarak IP adresini elde etmeyi sağlar.
+#### Proxy ARP:
+Tanım: Proxy ARP, ağdaki bir cihazın başka bir cihaza yönelik ARP isteklerini yanıtladığı bir tekniktir. Bir yönlendiricinin, aynı alt ağda olmayan cihazlar adına ARP isteklerine yanıt vermesini sağlar.
+Kullanım Durumu: Proxy ARP, farklı alt ağlardaki cihazların iletişim kurması gereken senaryolarda yaygın olarak kullanılır ve Proxy ARP'nin etkin olduğu bir yönlendirici, trafiğin iletilmesine yardımcı olur.
 
-#### Proxy ARP
-Bir cihaz, belirli bir IP adresine bir çerçeve (frame) göndermeye karar verir. Ancak, bu cihaz, hedef IP adresiyle doğrudan aynı ağda (subnet) bulunmamaktadır. Yerel ağda bu IP adresini çözümlemek için normal ARP işlemi başarısız olur çünkü hedef IP adresi doğrudan erişilebilir değildir. Proxy ARP devreye girer. Proxy ARP etkinleştirilmiş bir yönlendirici, sanki hedef IP adresi aynı ağda gibi davranır ve göndericiye hedef cihazın MAC adresini verir. Gönderici, alınan MAC adresiyle çerçevesini doğrudan Proxy ARP'ya gönderir.
-Proxy ARP, alınan çerçeveyi hedef cihaza iletmek için kullanılır.
+#### Gratuitous ARP:
+Tanım: Karşılıksız ARP, kaynak ve hedef IP adreslerinin gönderenin IP adresine ayarlandığı bir ARP isteği veya yanıt paketidir. Ağdaki diğer cihazların ARP önbelleklerini gönderenin MAC adresiyle ilgili yeni bilgilerle güncellemek için kullanılır.
+Kullanım Örneği: Karşılıksız ARP genellikle bir cihaz MAC adresinde veya IP adresinde bir değişiklik duyurmak istediğinde kullanılır ve diğer cihazların ARP önbelleklerini güncellemesine yardımcı olur.
 
-#### Inverse ARP
-Ters Adres Çözümleme Protokolü, IP Adresini bulmak için MAC Adresini kullanır; Ters ARP, ARP'nin tam tersi olduğu şeklinde basitçe gösterilebilir. ATM (Asenkron Aktarım Modu) Ağlarında varsayılan olarak Ters ARP kullanılır. Ters ARP, Katman 2 Adreslerinden Katman 3 Adreslerini bulmaya yardımcı olur.
+#### Reverse ARP (RARP):
+Bir cihazın yalnızca MAC adresini bildiği halde IP adresini keşfetmek için kullandığı bir protokoldür. Ağa MAC adresini içeren bir yayın isteği göndererek çalışır ve RARP sunucusu karşılık gelen IP adresiyle yanıt verir.
+Kullanım Örneği: RARP günümüzde daha az yaygındır ancak geçmişte özellikle disksiz iş istasyonlarında önyükleme sırasında bir IP adresi elde etmek için kullanılmıştır
+
+#### Inverse ARP (InARP):
+Çerçeve Rölesi ve Asenkron Aktarım Modu (ATM) ağlarında, bilinen veri bağlantısı katmanı adresine dayalı olarak bir PVC'nin (Kalıcı Sanal Devre) diğer ucunun IP adresini keşfetmek için kullanılır.
+Kullanım Durumu: InARP, özellikle cihazların, Çerçeve Aktarmadaki belirli bir Veri Bağlantısı Bağlantı Tanımlayıcısı (DLCI) veya ATM ağlarındaki Sanal Yol Tanımlayıcısı/Sanal Kanal Tanımlayıcısı (VPI/VCI) ile ilişkili IP adresini öğrenmesi gereken durumlarda geçerlidir.
 
 ### ARP Nasıl Çalışır
 Kaynak ağdaki tüm cihazlara bir paket yayınladığında, bu yayın, ağdaki cihazlar tarafından alınır. Her bir cihaz, Protokol Veri Birimi (PDU) olarak adlandırılan çerçeveden veri bağlantı katmanının başlığını çıkarır. Ardından, bu paket, ağ kimliği hedef IP adresleriyle doğrulandığı ağ katmanına (OSI'nin 3. katmanı) iletilir.
