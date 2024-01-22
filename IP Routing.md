@@ -52,4 +52,7 @@ Sadece router'da routing fonksiyonundan bahsettiğimize göre bu cihazın sadece
 
 Yönlendirme tablosuna göz atarken yönlendirici, hedef IP'nin o tablodaki bir giriş olduğunu fark edecektir. 192.168.4.0'a uygun maske ile doğrudan bağlı bir segmente bakın; aslında Hızlı Ethernet 0/1'de bulunur. Daha sonra karar, doğrudan katman 2 sürecine göndermek ve katman 2'nin hedefin MAC adresini çözmesini sağlamaktır. Eğer bu doğrudan bağlantılı bir bölüm değilse, yönlendirme tablosundaki giriş, yoldaki başka bir yönlendiricinin IP adresi biçimindeki bir sonraki atlama noktasına işaret edecektir. Bu noktada, yönlendirici bu ara cihaza yönlendirme talebinde bulunacak ve böylece ARP çözümlemesi, kendi MAC adresini bulmak için o cihaza karşı devam edecektir. Buradaki durum, birbirine bağlı iki ağın olduğu basit bir senaryodur.
 
-
+Bu noktada, yönlendirici bu ara cihaza yönlendirme talebinde bulunacak ve böylece ARP çözümlemesi, kendi MAC adresini bulmak için o cihaza karşı devam edecektir. Buradaki durum, birbirine bağlı iki ağın olduğu basit bir senaryodur.
+Bu nedenle, yönlendiricinin ağ katmanı, hedef IP'ler alanına hedef makinenin IP adresi de dahil olmak üzere IP başlığını bir araya getirecektir. Katman 2'de bu bir ara adımdır ve bu nedenle MAC adresi değiştirilir.
+ARP isteği." Unutmayın, bu 2. katmandaki bir yayındır ve bu nedenle o segmentteki tüm makineler bunu görecek, işleyecek ve yanıt vermeleri gerekip gerekmediğine karar verecektir.
+ARP yanıtı gönderilmeden önce hedef makine, yönlendiricinin IP'sinin eşlemesini ARP tablosundaki MAC adresine de kaydedecektir. Bu nedenle, makinelerin yalnızca bir ARP yanıtı gördüklerinde değil, aynı zamanda bir ARP isteği gördüklerinde de ARP tablosunu nasıl dolduracaklarını görmek ilginçtir. 
