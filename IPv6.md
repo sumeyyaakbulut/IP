@@ -26,11 +26,11 @@ IPv6 sadece daha uzun adreslerden ibaret değil. IPv6'nin hedefleri, uçtan uca 
   
 * Ağdaki her IPv6 düğümünün, yerel segmentinin dışında iletişim kurabilmesi için küresel olarak benzersiz bir adrese ihtiyacı vardır. Peki bir düğüm böyle bir adresi nereden alır? Birkaç seçenek var:
 
-Manuel Atama: Her düğüm, bir yönetici tarafından manuel olarak bir IPv6 adresiyle yapılandırılabilir. Ölçeklenebilir bir yaklaşım değildir ve insan hatasına açıktır. 
+* Manuel Atama: Her düğüm, bir yönetici tarafından manuel olarak bir IPv6 adresiyle yapılandırılabilir. Ölçeklenebilir bir yaklaşım değildir ve insan hatasına açıktır. 
 
-DHCPv6 (Dinamik Ana Bilgisayar Yapılandırma Protokolü sürüm 6): Ana bilgisayarlara dinamik olarak adres atamak için en yaygın olarak benimsenen protokol. Ağda bir DHCP sunucusu ve ek yapılandırma gerektirir.
+* DHCPv6 (Dinamik Ana Bilgisayar Yapılandırma Protokolü sürüm 6): Ana bilgisayarlara dinamik olarak adres atamak için en yaygın olarak benimsenen protokol. Ağda bir DHCP sunucusu ve ek yapılandırma gerektirir.
 
-SLAAC (Durum Bilgisi Olmayan Adres Otomatik Yapılandırması): IPv6 (Internet Protocol version 6) adres yapılandırmasında kullanılan bir protokoldür. Bu protokol, bilgisayarların ağa bağlandığında otomatik olarak IPv6 adreslerini yapılandırmalarını sağlar. Stateless (durumsuz) olarak adlandırılmasının sebebi, bu protokolün ağdaki diğer cihazlar veya bir merkezi sunucu tarafından yönetilen bir durum bilgisine ihtiyaç duymadan çalışabilmesidir.
+* SLAAC (Durum Bilgisi Olmayan Adres Otomatik Yapılandırması): IPv6 (Internet Protocol version 6) adres yapılandırmasında kullanılan bir protokoldür. Bu protokol, bilgisayarların ağa bağlandığında otomatik olarak IPv6 adreslerini yapılandırmalarını sağlar. Stateless (durumsuz) olarak adlandırılmasının sebebi, bu protokolün ağdaki diğer cihazlar veya bir merkezi sunucu tarafından yönetilen bir durum bilgisine ihtiyaç duymadan çalışabilmesidir.
 
 
 ## SLAAC Nedir
