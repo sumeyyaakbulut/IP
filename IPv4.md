@@ -11,7 +11,7 @@ Bu IP adresinin ilk 3 byte'ı (24 bit) "network" kısmını temsil eder. Bu kıs
 
 Son byte (8 bit), ise "host" kısmını temsil eder. Bu kısım, ağ içindeki bir cihazı benzersiz bir şekilde tanımlar. Bu, telefon numarasının son rakamları gibi, belirli bir ağ içindeki bir cihazı belirlemek için kullanılır.
 
-Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısmı, hangisinin "host" kısmı olduğunu belirler. Örneğin, 255.255.255.0 alt ağ maskesi, ilk 3 byte'ın "network" kısmını belirler, geriye kalan son byte'ın ise "host" kısmını. Yani, alt ağ maskesi, IP adresinin hangi kısmının ağ bilgisini, hangi kısmının ise cihazın benzersiz kimliğini temsil ettiğini gösterir.
+Alt ağ maskesi (subnet mask), IP adresinin hangi bölümünün "network" kısmı, hangisinin "host" kısmı olduğunu belirler. Örneğin, 255.255.255.0 alt ağ maskesi, ilk 3 byte'ın "network" kısmını belirler, geriye kalan son byte'ın ise "host" kısmıdır. Yani, alt ağ maskesi, IP adresinin hangi kısmının ağ bilgisini, hangi kısmının ise cihazın benzersiz kimliğini temsil ettiğini gösterir.
 
 ### IPv4'ün Özellikleri
 * 32 Bitlik IP Adresi: IPv4, 32 bit uzunluğunda IP adresleri kullanır. Bu, teorik olarak yaklaşık 4.3 milyar benzersiz IP adresi sağlar.
@@ -69,7 +69,7 @@ Gönderen cihaz yerel ağa bir ARP İsteği mesajı yayınlar. Bu ARP İsteği, 
 Ağdaki tüm cihazlar ARP İsteğini alır ancak yalnızca eşleşen IP adresine sahip cihaz yanıt verir.
 
 5. ARP'nin Cevabı (ARP Reply):
-Eşleşen IP adresine sahip cihaz, istekte bulunan kişiye doğrudan bir ARP Yanıtı gönderir. ARP Yanıtı gönderenin MAC adresini içerir.Orijinal istek sahibi, ARP önbelleğini alınan bilgilerle günceller.
+Eşleşen IP adresine sahip cihaz, istekte bulunan kişiye doğrudan bir ARP Yanıtı gönderir. ARP Yanıtı gönderenin MAC adresini içerir. Orijinal istek sahibi, ARP önbelleğini alınan bilgilerle günceller.
 
 6. ARP Önbelleğe Alma (ARP Caching):
 Hem istekte bulunan hem de yanıtlayan, ARP önbelleklerini IP-MAC adres eşlemesiyle günceller. Cihazlar artık ARP sürecinden geçmeden doğrudan birbirlerine adreslenebildiğinden, bu gelecekteki iletişimlerde yardımcı olur.
@@ -91,7 +91,7 @@ ARP önbelleklerinin zaman aşımı vardır ve girişler belirli bir süre sonra
   
 * Type of Service (TOS) or Differentiated Services Code Point (DSCP) - 8 bits: Başlangıçta hizmet kalitesini belirlemek için tasarlanmış olup, modern ağlarda DSCP olarak yeniden tanımlanarak hizmet sınıflarının daha ayrıntılı bir tanımına olanak sağlanmıştır.
 
-* Total Length (16 bits): IPv4 paketinin (başlık + veri) toplam uzunluğunu bayt cinsinden belirtir.
+* Total Length (16 bits): IPv4 paketinin (başlık + veri) toplam uzunluğunu byte cinsinden belirtir.
   
 * Identification (16 bits): Tek bir IP datagramının bir grup parçasını benzersiz şekilde tanımlamak için kullanılır.
   
